@@ -7,7 +7,7 @@
   <title>BANGALORE NORTH DIRECTORATE // CASE FILE: SANITY STOLEN</title>
   
   <!-- CSS Stylesheet (Versioned to bypass browser cache) -->
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -259,7 +259,7 @@
 
   </main>
 
-  <!-- Interactive Folder & Google Sheets RSVP Sync Logic -->
+  <!-- Interactive Folder & Real 3D Page Flip Logic -->
   <script>
     // =========================================================================
     // ADMIN CONFIGURATION: GOOGLE APPS SCRIPT WEBHOOK URL FOR GOOGLE SHEETS
@@ -280,6 +280,7 @@
 
     let isFolderOpened = false;
     let pinnedPolaroids = [];
+    let currentTab = 'cover';
 
     // Load saved polaroids from localStorage
     function loadSavedPolaroids() {
@@ -301,35 +302,69 @@
       }
     }
 
-    function resetViews() {
-      storyView.classList.remove('active-page');
-      rsvpView.classList.remove('active-page');
-      artifactsView.classList.remove('active-page');
+    function getPageViewElement(tab) {
+      if (tab === 'cover') return storyView;
+      if (tab === 'rsvp') return rsvpView;
+      if (tab === 'artifacts') return artifactsView;
+      return storyView;
+    }
 
+    function getTabButtonElement(tab) {
+      if (tab === 'cover') return tabBtnCover;
+      if (tab === 'rsvp') return tabBtnRsvp;
+      if (tab === 'artifacts') return tabBtnArtifacts;
+      return tabBtnCover;
+    }
+
+    // REAL 3D PAPER PAGE FLIP TRANSITION BETWEEN TABS
+    function showTab(targetTab) {
+      if (targetTab === currentTab && isFolderOpened) return;
+
+      const currentViewEl = getPageViewElement(currentTab);
+      const targetViewEl = getPageViewElement(targetTab);
+
+      // Update button active highlights
       tabBtnCover.classList.remove('active');
       tabBtnRsvp.classList.remove('active');
       tabBtnArtifacts.classList.remove('active');
-    }
+      getTabButtonElement(targetTab).classList.add('active');
 
-    function showTab(tab) {
-      resetViews();
-      
-      if (tab === 'cover') {
-        storyView.classList.add('active-page');
-        tabBtnCover.classList.add('active');
-      } else if (tab === 'rsvp') {
-        rsvpView.classList.add('active-page');
-        tabBtnRsvp.classList.add('active');
-      } else if (tab === 'artifacts') {
-        artifactsView.classList.add('active-page');
-        tabBtnArtifacts.classList.add('active');
+      if (isFolderOpened && currentViewEl && targetViewEl && currentViewEl !== targetViewEl) {
+        // Trigger 3D Page Turn Out on current page
+        currentViewEl.classList.add('page-flip-out');
+
         setTimeout(() => {
-          renderPolaroids();
-        }, 50);
+          currentViewEl.classList.remove('active-page', 'page-flip-out');
+          
+          // Trigger 3D Page Turn In on target page
+          targetViewEl.classList.add('active-page', 'page-flip-in');
+
+          if (targetTab === 'artifacts') {
+            renderPolaroids();
+          }
+
+          setTimeout(() => {
+            targetViewEl.classList.remove('page-flip-in');
+          }, 450);
+
+        }, 250);
+
+      } else {
+        storyView.classList.remove('active-page');
+        rsvpView.classList.remove('active-page');
+        artifactsView.classList.remove('active-page');
+
+        targetViewEl.classList.add('active-page');
+
+        if (targetTab === 'artifacts') {
+          setTimeout(renderPolaroids, 50);
+        }
       }
+
+      currentTab = targetTab;
     }
 
-    // REAL 3D FILE OPENING TRIGGER
+    // REAL 3D FILE COVER UNSEALING TRIGGER
     openFolderBtn.addEventListener('click', () => {
       if (isFolderOpened) return;
       
