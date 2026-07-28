@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BANGALORE NORTH DIRECTORATE - ZERO SCROLL MOBILE COMPACT LAYOUT
+   BANGALORE NORTH DIRECTORATE - PERFECT FOLDER & DRAWER LAYOUT
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap');
@@ -24,27 +24,27 @@
   --font-sans: 'Inter', sans-serif;
 }
 
-/* Reset & Strict 100dvh Zero-Scroll setup */
+/* Reset & Base Setup */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html {
   width: 100%;
-  height: 100%;
-  height: 100dvh;
-  overflow: hidden !important;
+  min-height: 100vh;
   background-color: #0d0603;
-  color: var(--ink-black);
-  font-family: var(--font-typewriter);
-  position: relative;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* DEEP WOODEN DRAWER INTERIOR FLOOR */
 body {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--ink-black);
+  font-family: var(--font-typewriter);
+  position: relative;
+  -webkit-font-smoothing: antialiased;
   background-color: #1e1108;
   background-image: 
     radial-gradient(circle at 50% 30%, rgba(255, 215, 140, 0.16) 0%, rgba(255, 170, 70, 0.04) 50%, transparent 80%),
@@ -65,13 +65,8 @@ body {
 
 .open-drawer-container {
   width: 100%;
-  height: 100%;
-  height: 100dvh;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* TOP DRAWER OVERHANG LIP / RIM EDGE */
@@ -80,7 +75,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 24px;
   background: linear-gradient(180deg, #422915 0%, #26160a 70%, #120904 100%);
   border-bottom: 2px solid #0f0703;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.95);
@@ -92,7 +87,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 18px;
+  width: 24px;
   height: 100%;
   background: linear-gradient(90deg, #3d2513 0%, #29180b 60%, #140a04 100%);
   border-right: 2px solid #0f0703;
@@ -105,7 +100,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 18px;
+  width: 24px;
   height: 100%;
   background: linear-gradient(270deg, #3d2513 0%, #29180b 60%, #140a04 100%);
   border-left: 2px solid #0f0703;
@@ -119,7 +114,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 24px;
+  height: 28px;
   background: linear-gradient(0deg, #472b16 0%, #2b1a0d 70%, #120904 100%);
   border-top: 2px solid #0f0703;
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.95);
@@ -131,8 +126,8 @@ body {
 
 /* BRASS DRAWER PULL HANDLE IN CENTER OF BOTTOM LIP */
 .drawer-brass-handle {
-  width: 100px;
-  height: 12px;
+  width: 110px;
+  height: 14px;
   background: linear-gradient(180deg, #ffe699 0%, #d4af37 40%, #806312 85%, #3d2f06 100%);
   border: 1px solid #362904;
   border-radius: 3px;
@@ -144,13 +139,13 @@ body {
   position: fixed;
   top: 0;
   height: 100%;
-  width: 6px;
+  width: 8px;
   background: linear-gradient(90deg, #888888 0%, #dddddd 40%, #444444 100%);
   z-index: 35;
 }
 
-.rail-left { left: 18px; }
-.rail-right { right: 18px; }
+.rail-left { left: 24px; }
+.rail-right { right: 24px; }
 
 /* ==========================================================================
    REALISTIC WOOD DRAWER SCATTERED ARTIFACTS
@@ -174,10 +169,10 @@ body {
 
 .drawer-coffee-stain {
   position: absolute;
-  top: 35px;
-  left: 35px;
-  width: 110px;
-  height: 110px;
+  top: 45px;
+  left: 45px;
+  width: 120px;
+  height: 120px;
   border: 6px solid rgba(54, 31, 10, 0.4);
   border-radius: 50%;
   filter: blur(1px);
@@ -187,10 +182,10 @@ body {
 
 .drawer-coffee-stain-secondary {
   position: absolute;
-  bottom: 45px;
-  right: 120px;
-  width: 90px;
-  height: 90px;
+  bottom: 65px;
+  right: 140px;
+  width: 95px;
+  height: 95px;
   border: 4px solid rgba(48, 27, 8, 0.3);
   border-radius: 50%;
   filter: blur(1px);
@@ -198,124 +193,124 @@ body {
 }
 
 .prop-law-book {
-  top: 140px;
-  right: 5px;
-  width: 130px;
-  height: 170px;
+  top: 180px;
+  right: 15px;
+  width: 145px;
+  height: 190px;
   background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
   border: 1.5px solid #3a4a6b;
   border-radius: 3px 8px 8px 3px;
   box-shadow: 8px 14px 25px rgba(0, 0, 0, 0.9);
-  padding: 0.6rem 0.5rem;
+  padding: 0.8rem 0.6rem;
   transform: rotate(7deg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .law-book-title {
   font-family: var(--font-header);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #ffe699;
   letter-spacing: 0.12em;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
+.law-book-subtitle { font-size: 0.55rem; color: #ccc; }
+
 .prop-flashlight {
-  top: 160px;
-  left: 5px;
-  width: 120px;
+  top: 180px;
+  left: 15px;
+  width: 135px;
   transform: rotate(-72deg);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .prop-handcuffs {
-  top: 25px;
-  left: 25px;
-  width: 100px;
+  top: 35px;
+  left: 35px;
+  width: 110px;
   transform: rotate(-22deg);
   opacity: 0.9;
 }
 
 .drawer-prop-badge {
-  top: 25px;
-  right: 25px;
-  width: 110px;
+  top: 35px;
+  right: 35px;
+  width: 125px;
   transform: rotate(14deg);
   filter: drop-shadow(6px 12px 18px rgba(0, 0, 0, 0.9));
 }
 
 .prop-brass-pen {
-  bottom: 35px;
-  right: 25px;
-  width: 120px;
+  bottom: 45px;
+  right: 35px;
+  width: 135px;
   transform: rotate(-18deg);
   opacity: 0.9;
 }
 
 .prop-memo-paper {
-  bottom: 30px;
-  left: 10px;
-  width: 140px;
+  bottom: 40px;
+  left: 20px;
+  width: 155px;
   background: #f4ebd9;
   border: 1px solid #2b2014;
-  padding: 0.5rem 0.6rem;
+  padding: 0.6rem 0.7rem;
   font-family: var(--font-typewriter);
   box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.85);
   transform: rotate(9deg);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-.memo-header { font-size: 0.62rem; font-weight: 700; color: var(--stamp-red); }
-.memo-line { font-size: 0.52rem; color: #2b2014; }
+.memo-header { font-size: 0.65rem; font-weight: 700; color: var(--stamp-red); }
+.memo-line { font-size: 0.55rem; color: #2b2014; }
 
-/* Hide drawer side props on mobile screen heights < 750px to ensure zero overlap */
-@media (max-width: 800px), (max-height: 750px) {
+/* Responsive adjustments */
+@media (max-width: 900px) {
   .prop-law-book { display: none; }
   .prop-flashlight { display: none; }
   .prop-brass-pen { display: none; }
   .prop-memo-paper { display: none; }
-  .drawer-prop-badge { width: 85px; top: 18px; right: 10px; }
-  .prop-handcuffs { width: 75px; top: 18px; left: 10px; }
+  .drawer-prop-badge { width: 95px; top: 25px; right: 15px; }
+  .prop-handcuffs { width: 85px; top: 25px; left: 15px; }
 }
 
 /* ==========================================================================
-   STRICT ZERO-SCROLL VIEWPORT CONTAINER
+   FULLY VISIBLE FOLDER VIEWPORT CONTAINER
    ========================================================================== */
 
 .viewport-container {
-  width: 100%;
-  height: 100%;
-  height: 100dvh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.8rem 1.4rem;
+  padding: 3.5rem 1.2rem 3.5rem 1.2rem;
   perspective: 2000px;
   position: relative;
   z-index: 10;
-  overflow: hidden;
 }
 
 /* Outer Folder Wrapper */
 .police-folder-wrapper {
   width: 100%;
-  max-width: 580px;
-  max-height: calc(100dvh - 3.6rem);
+  max-width: 600px;
   position: relative;
   transform-style: preserve-3d;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.8s ease;
 }
 
 /* TOP FILE TABS */
 .folder-top-tabs {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.3rem;
   position: absolute;
-  top: -28px;
-  left: 12px;
+  top: -32px;
+  left: 14px;
   z-index: 25;
 }
 
@@ -327,54 +322,51 @@ body {
   background: #b5894b;
   border: 1px solid #1c150e;
   border-bottom: none;
-  border-radius: 3px 3px 0 0;
-  padding: 0.3rem 0.85rem;
+  border-radius: 4px 4px 0 0;
+  padding: 0.4rem 1rem;
   font-family: var(--font-header);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: #1a1209;
   cursor: pointer;
-  box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
 }
 
 .tab-btn.active {
   background: var(--folder-bg);
   color: #000000;
-  padding-bottom: 0.45rem;
+  padding-bottom: 0.55rem;
   transform: translateY(-2px);
+  font-weight: 700;
 }
 
-/* COMPACT POLICE FOLDER BODY */
+/* POLICE FOLDER BODY */
 .police-folder {
   width: 100%;
-  height: 100%;
-  max-height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  display: flex;
-  flex-direction: column;
+  min-height: 560px;
 }
 
 .folder-base-back {
   width: 100%;
-  height: 100%;
+  min-height: 560px;
   background: linear-gradient(145deg, var(--folder-bg) 0%, var(--folder-bg-dark) 100%);
   border: 1px solid #140e08;
-  border-radius: 6px 28px 6px 6px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
-  padding: 1.8rem 1.4rem 1.4rem 1.4rem;
+  border-radius: 8px 32px 6px 6px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9);
+  padding: 2.4rem 1.8rem 2.2rem 1.8rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .folder-spine-crease {
   position: absolute;
   top: 0;
-  left: 16px;
+  left: 20px;
   width: 2px;
   height: 100%;
   background: rgba(0, 0, 0, 0.25);
@@ -388,11 +380,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   background: linear-gradient(145deg, var(--folder-bg) 0%, var(--folder-bg-dark) 100%);
-  border-radius: 6px 28px 6px 6px;
+  border-radius: 8px 32px 6px 6px;
   border: 1px solid #140e08;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
-  padding: 1.8rem 1.4rem 1.4rem 1.4rem;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.85);
+  padding: 2.4rem 1.8rem 2.2rem 1.8rem;
   transform-origin: left center;
   transform-style: preserve-3d;
   transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -401,7 +394,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 .police-folder.is-unsealed .folder-front-flap {
@@ -413,28 +405,28 @@ body {
 /* Crime Tape Strip */
 .crime-tape-banner {
   position: absolute;
-  top: 14px;
-  left: -20px;
+  top: 18px;
+  left: -22px;
   background: #d4a406;
   color: #110d08;
   border: 1px solid #000000;
   font-family: var(--font-header);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  padding: 0.18rem 1.4rem;
-  transform: rotate(-10deg);
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.22em;
+  padding: 0.22rem 1.6rem;
+  transform: rotate(-11deg);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
   z-index: 12;
   text-transform: uppercase;
 }
 
 .coffee-stain {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 70px;
-  height: 70px;
+  bottom: 20px;
+  right: 20px;
+  width: 85px;
+  height: 85px;
   border: 4px solid rgba(70, 45, 18, 0.2);
   border-radius: 50%;
   pointer-events: none;
@@ -443,28 +435,28 @@ body {
 
 .paper-clip {
   position: absolute;
-  top: -10px;
-  right: 50px;
-  width: 12px;
-  height: 32px;
+  top: -12px;
+  right: 60px;
+  width: 14px;
+  height: 38px;
   border: 2px solid #757169;
-  border-radius: 8px;
+  border-radius: 9px;
   z-index: 15;
 }
 
 /* RED CONFIDENTIAL STAMP */
 .stamp-confidential {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.2rem;
+  right: 1.2rem;
   font-family: var(--font-stamp);
-  font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+  font-size: clamp(1.5rem, 5vw, 2.1rem);
   font-weight: 700;
   color: var(--stamp-red);
-  border: 2.5px solid var(--stamp-red);
-  padding: 0.15rem 0.6rem;
+  border: 3px solid var(--stamp-red);
+  padding: 0.2rem 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   transform: rotate(-7deg);
   opacity: 0.92;
   pointer-events: none;
@@ -472,79 +464,80 @@ body {
 
 /* Directorate Header */
 .directorate-header {
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1.5px solid rgba(24, 20, 16, 0.7);
-  padding-right: 5rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid rgba(24, 20, 16, 0.7);
+  padding-right: 6rem;
 }
 
 .police-badge-icon {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 0.2rem;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0.3rem;
 }
 
 .police-seal {
   font-family: var(--font-header);
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
   color: #3b2a18;
   font-weight: 700;
 }
 
 .directorate-title {
   font-family: var(--font-header);
-  font-size: clamp(1.05rem, 3.6vw, 1.35rem);
+  font-size: clamp(1.2rem, 3.8vw, 1.55rem);
   font-weight: 700;
   letter-spacing: 0.05em;
   color: var(--ink-black);
   text-transform: uppercase;
   margin-top: 0.1rem;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .sub-dept {
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
   color: #4a351e;
   font-weight: 700;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
 }
 
 /* Case Details Block */
 .case-details-block {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.8rem;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1.2rem;
   background: #ede3d1;
   border: 1px solid var(--ink-black);
-  padding: 0.8rem 0.9rem;
+  padding: 1.1rem 1.2rem;
   border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .detail-row {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.15rem;
 }
 
 .detail-label {
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: #4a3620;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
 }
 
 .detail-value {
   font-family: var(--font-typewriter);
-  font-size: clamp(0.9rem, 3vw, 1.15rem);
+  font-size: clamp(1rem, 3.4vw, 1.3rem);
   font-weight: 700;
   color: var(--ink-black);
   letter-spacing: 0.05em;
   background: #ffffff;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.75rem;
   border: 1px solid var(--ink-black);
   border-radius: 2px;
   display: inline-block;
@@ -557,9 +550,8 @@ body {
 .location-link {
   color: var(--stamp-red);
   text-decoration: none;
-  border-bottom: 1.5px solid var(--stamp-red);
+  border-bottom: 2px solid var(--stamp-red);
   font-weight: 700;
-  font-size: 0.85rem;
 }
 
 /* BUTTON UNSEAL */
@@ -567,28 +559,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.5rem;
   margin-top: auto;
+  padding-bottom: 0.2rem;
 }
 
 .string-fastener-visual {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
 
 .string-button {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background: radial-gradient(circle at 35% 35%, #735028 0%, #3d2913 90%);
   border: 1px solid var(--ink-black);
   border-radius: 50%;
 }
 
 .string-line {
-  width: 2.5px;
-  height: 16px;
+  width: 3px;
+  height: 20px;
   background: var(--stamp-red);
 }
 
@@ -596,15 +589,21 @@ body {
   background: var(--stamp-red);
   color: #ffffff;
   border: 1px solid var(--ink-black);
-  padding: 0.65rem 1.4rem;
+  padding: 0.85rem 1.8rem;
   font-family: var(--font-header);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+.open-folder-btn:hover {
+  background: #d40d0d;
+  transform: translateY(-1px);
 }
 
 /* HIGHLIGHTER MARKER */
@@ -618,7 +617,7 @@ body {
     rgba(253, 224, 71, 0.75) 96%, 
     rgba(253, 224, 71, 0) 98%
   );
-  padding: 0.08em 0.35em;
+  padding: 0.1em 0.4em;
   color: #0d0a07;
   font-weight: 700;
   display: inline-block;
@@ -636,29 +635,27 @@ body {
   background: var(--paper-inside);
   border: 1px solid var(--ink-black);
   border-radius: 2px;
-  padding: 1.4rem 1.2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   position: relative;
-  height: 100%;
+  min-height: 480px;
   display: none;
   transform-origin: left center;
   backface-visibility: hidden;
-  overflow-y: auto;
 }
 
 .police-folder.is-unsealed .inside-paper-page.active-page {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 /* 3D PAGE FLIP ANIMATIONS */
 .inside-paper-page.page-flip-out {
-  display: flex !important;
+  display: block !important;
   animation: pageFlipTurnOut 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
 }
 
 .inside-paper-page.page-flip-in {
-  display: flex !important;
+  display: block !important;
   animation: pageFlipTurnIn 0.45s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
@@ -676,20 +673,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1.5px solid var(--ink-black);
-  padding-bottom: 0.4rem;
-  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--ink-black);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .paper-header-title {
   font-family: var(--font-header);
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   letter-spacing: 0.14em;
   font-weight: 700;
 }
 
 .paper-file-id {
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   color: #5c4731;
   font-weight: 700;
 }
@@ -698,66 +695,66 @@ body {
 .incident-story-box {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  line-height: 1.5;
+  gap: 1rem;
+  line-height: 1.6;
   color: #1a140e;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .story-heading {
   font-family: var(--font-header);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--stamp-red);
   letter-spacing: 0.12em;
   font-weight: 700;
   border-bottom: 1px solid rgba(187, 10, 10, 0.3);
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.25rem;
 }
 
 .event-brief-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
-  margin-top: 0.6rem;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
   background: #eae2d1;
-  padding: 0.8rem;
+  padding: 1rem;
   border: 1px solid var(--ink-black);
   border-radius: 2px;
 }
 
-.brief-label { font-size: 0.6rem; font-weight: 700; color: var(--stamp-red); }
-.brief-val { font-size: 0.82rem; font-weight: 700; }
+.brief-label { font-size: 0.65rem; font-weight: 700; color: var(--stamp-red); }
+.brief-val { font-size: 0.9rem; font-weight: 700; }
 
 /* TAB 2: RSVP */
 .rsvp-form-container {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.1rem;
 }
 
-.rsvp-instruction { font-size: 0.78rem; color: #3b2e21; }
-.form-group { display: flex; flex-direction: column; gap: 0.25rem; }
-.form-label { font-size: 0.7rem; font-weight: 700; }
+.rsvp-instruction { font-size: 0.82rem; color: #3b2e21; }
+.form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-label { font-size: 0.75rem; font-weight: 700; }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
   background: #ffffff;
   border: 1px solid var(--ink-black);
-  padding: 0.5rem 0.7rem;
+  padding: 0.65rem 0.8rem;
   font-family: var(--font-typewriter);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   border-radius: 2px;
 }
 
-.rsvp-status-options { display: flex; flex-direction: column; gap: 0.5rem; }
+.rsvp-status-options { display: flex; flex-direction: column; gap: 0.6rem; }
 
 .radio-option {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-size: 0.8rem;
+  gap: 0.7rem;
+  font-size: 0.85rem;
   background: #ffffff;
-  padding: 0.5rem 0.7rem;
+  padding: 0.65rem 0.8rem;
   border: 1px solid var(--ink-black);
 }
 
@@ -765,10 +762,10 @@ body {
   background: var(--ink-black);
   color: var(--paper-inside);
   border: 1px solid var(--ink-black);
-  padding: 0.7rem 1.2rem;
+  padding: 0.8rem 1.4rem;
   font-family: var(--font-header);
-  font-size: 0.9rem;
-  letter-spacing: 0.14em;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 2px;
@@ -776,13 +773,13 @@ body {
 
 .rsvp-success-stamp {
   display: none;
-  margin-top: 0.5rem;
-  padding: 0.6rem;
-  border: 2px dashed var(--stamp-red);
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  border: 2.5px dashed var(--stamp-red);
   color: var(--stamp-red);
   font-family: var(--font-stamp);
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* TAB 3: MUGSHOTS WALL */
@@ -790,19 +787,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.8rem;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .download-all-btn {
   background: var(--stamp-red);
   color: #ffffff;
   border: 1px solid var(--ink-black);
-  padding: 0.45rem 0.85rem;
+  padding: 0.55rem 1rem;
   font-family: var(--font-header);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -810,8 +807,8 @@ body {
   position: relative;
   background: radial-gradient(circle, #241c14 0%, #0d0a07 100%);
   border: 1.5px solid var(--ink-black);
-  padding: 1.5rem 0.8rem;
-  min-height: 280px;
+  padding: 2rem 1rem;
+  min-height: 360px;
   overflow: hidden;
 }
 
@@ -827,8 +824,8 @@ body {
 
 .polaroids-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1.2rem 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1.8rem 1.2rem;
   position: relative;
   z-index: 3;
 }
@@ -836,8 +833,8 @@ body {
 .polaroid-card {
   background: #ffffff;
   border: 1px solid var(--ink-black);
-  padding: 0.5rem 0.5rem 0.7rem 0.5rem;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+  padding: 0.6rem 0.6rem 0.8rem 0.6rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -845,13 +842,13 @@ body {
 }
 
 .pushpin {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: radial-gradient(circle at 35% 35%, #ffe699 0%, #d4af37 40%, #997a15 80%, #473706 100%);
   border: 1px solid #473706;
   border-radius: 50%;
   position: absolute;
-  top: -6px;
+  top: -7px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -859,7 +856,7 @@ body {
 
 .polaroid-img-box {
   width: 100%;
-  height: 120px;
+  height: 150px;
   background: #141210;
   overflow: hidden;
 }
@@ -871,15 +868,15 @@ body {
 }
 
 .starter-caption {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--stamp-red);
 }
 
 .polaroid-caption {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   text-align: center;
 }
 
@@ -887,12 +884,12 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 .polaroid-btn {
   font-family: var(--font-header);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #5c452b;
   background: transparent;
@@ -902,21 +899,21 @@ body {
 
 #polaroid-file-input { display: none; }
 
-/* Mobile Adjustments for Small Screens */
-@media (max-width: 500px) {
+/* Mobile Responsive */
+@media (max-width: 600px) {
   .viewport-container {
-    padding: 1.2rem 0.8rem;
+    padding: 2.5rem 0.8rem 2.5rem 0.8rem;
+  }
+
+  .police-folder, .folder-base-back {
+    min-height: 500px;
   }
 
   .folder-base-back, .folder-front-flap {
-    padding: 1.4rem 1rem 1rem 1rem;
+    padding: 1.8rem 1.2rem 1.6rem 1.2rem;
   }
 
   .event-brief-grid {
     grid-template-columns: 1fr;
-  }
-
-  .directorate-header {
-    padding-right: 3.5rem;
   }
 }
