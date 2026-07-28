@@ -7,7 +7,7 @@
   <title>BANGALORE NORTH DIRECTORATE // CASE FILE: SANITY STOLEN</title>
   
   <!-- CSS Stylesheet (Versioned to bypass browser cache) -->
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -530,7 +530,7 @@
       svgPath.setAttribute('d', pathData);
     }
 
-    // Generate downloadable Canvas Polaroid PNG Data URL
+    // Generate downloadable Canvas Polaroid PNG Data URL with BRASS PUSHPIN
     function generatePolaroidCanvasDataURL(imageSrc, captionText, callback) {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
@@ -545,11 +545,20 @@
       ctx.lineWidth = 6;
       ctx.strokeRect(3, 3, canvas.width - 6, canvas.height - 6);
 
-      // Red Pushpin at Top
-      ctx.fillStyle = '#cc1818';
+      // Brass Metallic Pushpin at Top
+      const pinGrad = ctx.createRadialGradient(295, 20, 2, 300, 24, 14);
+      pinGrad.addColorStop(0, '#ffe699');
+      pinGrad.addColorStop(0.45, '#d4af37');
+      pinGrad.addColorStop(0.85, '#997a15');
+      pinGrad.addColorStop(1, '#473706');
+      
+      ctx.fillStyle = pinGrad;
       ctx.beginPath();
-      ctx.arc(300, 24, 12, 0, Math.PI * 2);
+      ctx.arc(300, 24, 13, 0, Math.PI * 2);
       ctx.fill();
+      ctx.strokeStyle = '#473706';
+      ctx.lineWidth = 2;
+      ctx.stroke();
 
       // Load & Draw Image
       const img = new Image();
