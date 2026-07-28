@@ -47,12 +47,9 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   
-  /* Deep Wooden Drawer Floor Texture */
   background-color: #1e1108;
   background-image: 
-    /* Soft Interior Drawer Spotlight Glow */
     radial-gradient(circle at 50% 30%, rgba(255, 215, 140, 0.16) 0%, rgba(255, 170, 70, 0.04) 50%, transparent 80%),
-    /* Horizontal Drawer Floor Wood Grain */
     repeating-linear-gradient(
       0deg,
       rgba(8, 4, 2, 0.8) 0px,
@@ -60,7 +57,6 @@ body {
       rgba(30, 17, 9, 0.85) 4px,
       rgba(40, 23, 12, 0.85) 120px
     ),
-    /* Deep Oak Base */
     linear-gradient(180deg, #221309 0%, #0d0603 100%);
   background-attachment: fixed;
 }
@@ -171,19 +167,8 @@ body {
 .rail-left { left: 32px; }
 .rail-right { right: 32px; }
 
-/* Responsive adjustments for mobile drawer frames */
-@media (max-width: 600px) {
-  .drawer-edge-left { width: 14px; }
-  .drawer-edge-right { width: 14px; }
-  .rail-left { left: 14px; }
-  .rail-right { right: 14px; }
-  .drawer-edge-top { height: 18px; }
-  .drawer-edge-bottom { height: 26px; }
-  .drawer-brass-handle { width: 90px; height: 14px; }
-}
-
 /* ==========================================================================
-   REALISTIC WOOD DRAWER ELEMENTS (COFFEE MUG STAIN & REAL BADGE ONLY)
+   REALISTIC WOOD DRAWER SCATTERED ARTIFACTS
    ========================================================================== */
 
 .wood-drawer-props-layer {
@@ -197,10 +182,16 @@ body {
   overflow: hidden;
 }
 
-/* REALISTIC DRIED COFFEE MUG STAIN ON THE WOODEN DRAWER SURFACE */
+.drawer-prop {
+  position: absolute;
+  filter: drop-shadow(5px 12px 20px rgba(0, 0, 0, 0.9));
+  transition: transform 0.3s ease;
+}
+
+/* 1. DRIED COFFEE MUG STAIN */
 .drawer-coffee-stain {
   position: absolute;
-  top: 60px;
+  top: 65px;
   left: 65px;
   width: 140px;
   height: 140px;
@@ -208,28 +199,14 @@ body {
   border-radius: 50%;
   filter: blur(1.2px);
   transform: rotate(-15deg) scaleY(0.88);
-  box-shadow: 
-    inset 0 0 12px rgba(45, 24, 7, 0.35),
-    0 0 8px rgba(45, 24, 7, 0.25);
+  box-shadow: inset 0 0 12px rgba(45, 24, 7, 0.35);
   opacity: 0.85;
-}
-
-.drawer-coffee-stain::after {
-  content: '';
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  width: 35px;
-  height: 18px;
-  background: rgba(54, 31, 10, 0.3);
-  border-radius: 50%;
-  filter: blur(2px);
 }
 
 .drawer-coffee-stain-secondary {
   position: absolute;
-  bottom: 80px;
-  right: 180px;
+  bottom: 90px;
+  right: 190px;
   width: 110px;
   height: 110px;
   border: 5px solid rgba(48, 27, 8, 0.35);
@@ -239,22 +216,94 @@ body {
   opacity: 0.7;
 }
 
-/* EXTREMELY REALISTIC POLICE DETECTIVE BADGE */
-.drawer-prop-badge {
-  position: absolute;
+/* 2. HANDCUFFS (TOP LEFT IN DRAWER) */
+.prop-handcuffs {
   top: 45px;
-  right: 60px;
-  width: 160px;
-  transform: rotate(12deg);
-  filter: drop-shadow(8px 16px 25px rgba(0, 0, 0, 0.95));
-  transition: transform 0.3s ease;
+  left: 45px;
+  width: 140px;
+  transform: rotate(-22deg);
+  opacity: 0.95;
 }
 
-/* Responsive Hide for Props on Very Small Mobile Devices */
+/* 3. POLICE BADGE (TOP RIGHT IN DRAWER) */
+.drawer-prop-badge {
+  top: 45px;
+  right: 55px;
+  width: 155px;
+  transform: rotate(14deg);
+  filter: drop-shadow(8px 16px 25px rgba(0, 0, 0, 0.95));
+}
+
+/* 4. COP BALLPOINT PEN (BOTTOM RIGHT IN DRAWER) */
+.prop-brass-pen {
+  bottom: 60px;
+  right: 45px;
+  width: 160px;
+  transform: rotate(-18deg);
+  opacity: 0.95;
+}
+
+/* 5. EVIDENCE MEMO (BOTTOM LEFT IN DRAWER) */
+.prop-memo-paper {
+  bottom: 50px;
+  left: 20px;
+  width: 190px;
+  background: #f4ebd9;
+  border: 1px solid #2b2014;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-typewriter);
+  box-shadow: 6px 12px 25px rgba(0, 0, 0, 0.9);
+  transform: rotate(9deg);
+  border-radius: 2px;
+  opacity: 0.92;
+}
+
+.memo-header {
+  font-family: var(--font-header);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--stamp-red);
+  border-bottom: 1px solid rgba(187, 10, 10, 0.4);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.memo-line {
+  font-size: 0.6rem;
+  color: #2b2014;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.memo-stamp {
+  font-family: var(--font-stamp);
+  color: var(--stamp-red);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 2px solid var(--stamp-red);
+  display: inline-block;
+  padding: 0.1rem 0.35rem;
+  transform: rotate(-10deg);
+  margin-top: 0.3rem;
+}
+
+/* 6. POLICE WHISTLE (BOTTOM CENTER) */
+.prop-whistle {
+  bottom: 55px;
+  left: 42%;
+  width: 75px;
+  transform: rotate(-12deg);
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
 @media (max-width: 900px) {
-  .drawer-prop-badge { width: 115px; top: 25px; right: 25px; }
-  .drawer-coffee-stain { width: 95px; height: 95px; top: 30px; left: 25px; }
-  .drawer-coffee-stain-secondary { display: none; }
+  .prop-handcuffs { width: 90px; top: 20px; left: 15px; }
+  .drawer-prop-badge { width: 110px; top: 20px; right: 15px; }
+  .prop-brass-pen { display: none; }
+  .prop-memo-paper { display: none; }
+  .prop-whistle { display: none; }
 }
 
 /* Viewport Container Inside Drawer */
