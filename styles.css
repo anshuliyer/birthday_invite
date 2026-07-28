@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BANGALORE NORTH DIRECTORATE - REALISTIC WOOD DRAWER BACKGROUND & BADGE
+   BANGALORE NORTH DIRECTORATE - REALISTIC OPEN WOODEN DRAWER ENVIRONMENT
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap');
@@ -34,10 +34,10 @@
 html {
   width: 100%;
   min-height: 100vh;
-  background-color: #140b05;
+  background-color: #0d0603;
 }
 
-/* REALISTIC WOOD DRAWER SURFACE BACKGROUND */
+/* DEEP WOODEN DRAWER INTERIOR FLOOR */
 body {
   width: 100%;
   min-height: 100vh;
@@ -47,43 +47,139 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   
-  /* Deep Wooden Drawer Texture with Horizontal Wood Planks */
-  background-color: #24160c;
+  /* Deep Wooden Drawer Floor Texture */
+  background-color: #1e1108;
   background-image: 
-    /* Subtle Drawer Lamp Warm Glow Focus */
-    radial-gradient(circle at 48% 30%, rgba(255, 215, 140, 0.18) 0%, rgba(255, 170, 70, 0.05) 45%, transparent 75%),
-    /* Horizontal Drawer Wood Planks & Seams */
+    /* Soft Interior Drawer Spotlight Glow */
+    radial-gradient(circle at 50% 30%, rgba(255, 215, 140, 0.16) 0%, rgba(255, 170, 70, 0.04) 50%, transparent 80%),
+    /* Horizontal Drawer Floor Wood Grain */
     repeating-linear-gradient(
       0deg,
-      rgba(10, 6, 3, 0.75) 0px,
-      rgba(10, 6, 3, 0.75) 3px,
-      rgba(38, 23, 13, 0.85) 4px,
-      rgba(48, 30, 17, 0.85) 120px,
-      rgba(18, 10, 5, 0.85) 124px
+      rgba(8, 4, 2, 0.8) 0px,
+      rgba(8, 4, 2, 0.8) 3px,
+      rgba(30, 17, 9, 0.85) 4px,
+      rgba(40, 23, 12, 0.85) 120px
     ),
-    /* Vertical Wood Fine Grain Lines */
-    repeating-linear-gradient(
-      90deg,
-      rgba(15, 8, 4, 0.3) 0px,
-      rgba(35, 20, 10, 0.3) 2px,
-      rgba(20, 11, 5, 0.3) 5px
-    ),
-    /* Deep Oak Base Color */
-    linear-gradient(180deg, #2b1a0d 0%, #150c05 100%);
+    /* Deep Oak Base */
+    linear-gradient(180deg, #221309 0%, #0d0603 100%);
   background-attachment: fixed;
 }
 
-/* Outer Drawer Vignette Overlay */
-body::after {
-  content: '';
+/* ==========================================================================
+   PROMINENT 3D OPEN WOODEN DRAWER FRAME (VISIBLE EDGES, WALLS & HANDLE)
+   ========================================================================== */
+
+.open-drawer-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* TOP DRAWER OVERHANG LIP / RIM EDGE */
+.drawer-edge-top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 28px;
+  background: linear-gradient(180deg, #422915 0%, #26160a 70%, #120904 100%);
+  border-bottom: 3px solid #0f0703;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.95);
+  z-index: 40;
+}
+
+/* LEFT DRAWER SIDE WALL EDGE */
+.drawer-edge-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
   height: 100%;
-  background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0, 0, 0, 0.82) 100%);
-  pointer-events: none;
-  z-index: 1;
+  background: linear-gradient(90deg, #3d2513 0%, #29180b 60%, #140a04 100%);
+  border-right: 3px solid #0f0703;
+  box-shadow: 12px 0 30px rgba(0, 0, 0, 0.95);
+  z-index: 40;
+}
+
+/* RIGHT DRAWER SIDE WALL EDGE */
+.drawer-edge-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 100%;
+  background: linear-gradient(270deg, #3d2513 0%, #29180b 60%, #140a04 100%);
+  border-left: 3px solid #0f0703;
+  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.95);
+  z-index: 40;
+}
+
+/* BOTTOM DRAWER FRONT LIP & BRASS HANDLE LEDGE */
+.drawer-edge-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  background: linear-gradient(0deg, #472b16 0%, #2b1a0d 70%, #120904 100%);
+  border-top: 3px solid #0f0703;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.95);
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BRASS DRAWER PULL HANDLE IN CENTER OF BOTTOM LIP */
+.drawer-brass-handle {
+  width: 130px;
+  height: 18px;
+  background: linear-gradient(180deg, #ffe699 0%, #d4af37 40%, #806312 85%, #3d2f06 100%);
+  border: 1px solid #362904;
+  border-radius: 4px 4px 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9), inset 0 2px 3px rgba(255, 255, 220, 0.8);
+  position: relative;
+}
+
+.drawer-brass-handle::before,
+.drawer-brass-handle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffe699 0%, #806312 100%);
+  border-radius: 50%;
+  border: 1px solid #291e03;
+}
+
+.drawer-brass-handle::before { left: 8px; }
+.drawer-brass-handle::after { right: 8px; }
+
+/* METAL DRAWER SLIDE RAILS */
+.drawer-slide-rail {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(90deg, #888888 0%, #dddddd 40%, #444444 100%);
+  z-index: 35;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.rail-left { left: 32px; }
+.rail-right { right: 32px; }
+
+/* Responsive adjustments for mobile drawer frames */
+@media (max-width: 600px) {
+  .drawer-edge-left { width: 14px; }
+  .drawer-edge-right { width: 14px; }
+  .rail-left { left: 14px; }
+  .rail-right { right: 14px; }
+  .drawer-edge-top { height: 18px; }
+  .drawer-edge-bottom { height: 26px; }
+  .drawer-brass-handle { width: 90px; height: 14px; }
 }
 
 /* ==========================================================================
@@ -97,7 +193,7 @@ body::after {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 5;
   overflow: hidden;
 }
 
@@ -105,7 +201,7 @@ body::after {
 .drawer-coffee-stain {
   position: absolute;
   top: 60px;
-  left: 55px;
+  left: 65px;
   width: 140px;
   height: 140px;
   border: 7px solid rgba(54, 31, 10, 0.45);
@@ -146,8 +242,8 @@ body::after {
 /* EXTREMELY REALISTIC POLICE DETECTIVE BADGE */
 .drawer-prop-badge {
   position: absolute;
-  top: 35px;
-  right: 50px;
+  top: 45px;
+  right: 60px;
   width: 160px;
   transform: rotate(12deg);
   filter: drop-shadow(8px 16px 25px rgba(0, 0, 0, 0.95));
@@ -156,21 +252,21 @@ body::after {
 
 /* Responsive Hide for Props on Very Small Mobile Devices */
 @media (max-width: 900px) {
-  .drawer-prop-badge { width: 115px; top: 18px; right: 15px; }
-  .drawer-coffee-stain { width: 95px; height: 95px; top: 20px; left: 10px; }
+  .drawer-prop-badge { width: 115px; top: 25px; right: 25px; }
+  .drawer-coffee-stain { width: 95px; height: 95px; top: 30px; left: 25px; }
   .drawer-coffee-stain-secondary { display: none; }
 }
 
-/* Viewport Container */
+/* Viewport Container Inside Drawer */
 .viewport-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4.2rem 1rem 4rem 1rem;
+  padding: 4.2rem 2.2rem 4rem 2.2rem;
   perspective: 2000px;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 /* Outer Folder Wrapper */

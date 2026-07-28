@@ -7,319 +7,337 @@
   <title>BANGALORE NORTH DIRECTORATE // CASE FILE: SANITY STOLEN</title>
   
   <!-- CSS Stylesheet (Versioned to bypass browser cache) -->
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
-  <!-- REALISTIC WOODEN DRAWER ENVIRONMENT (COFFEE STAIN & EXTREMELY REAL BADGE ONLY) -->
-  <div class="wood-drawer-props-layer" aria-hidden="true">
+  <!-- VISIBLE OPEN WOODEN DRAWER FRAME CONTAINER -->
+  <div class="open-drawer-container">
     
-    <!-- 1. REALISTIC DRIED COFFEE MUG STAIN ON THE WOODEN DRAWER SURFACE -->
-    <div class="drawer-coffee-stain"></div>
-    <div class="drawer-coffee-stain-secondary"></div>
+    <!-- 3D DRAWER WOODEN RIM EDGES & METAL SLIDE RAILS -->
+    <div class="drawer-edge-top" aria-hidden="true"></div>
+    <div class="drawer-edge-left" aria-hidden="true"></div>
+    <div class="drawer-edge-right" aria-hidden="true"></div>
+    <div class="drawer-edge-bottom" aria-hidden="true">
+      <div class="drawer-brass-handle"></div>
+    </div>
+    
+    <!-- METAL DRAWER SLIDE RAILS -->
+    <div class="drawer-slide-rail rail-left" aria-hidden="true"></div>
+    <div class="drawer-slide-rail rail-right" aria-hidden="true"></div>
 
-    <!-- 2. EXTREMELY REALISTIC POLICE DETECTIVE BADGE WITH LEATHER HOLDER -->
-    <div class="drawer-prop-badge">
-      <svg viewBox="0 0 160 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Black Leather Badge Holder Cutout Backing -->
-        <path d="M80 8 L152 32 V125 C152 168 80 202 80 202 C80 202 8 168 8 125 V32 Z" fill="#14110d" stroke="#050403" stroke-width="4" filter="url(#leatherShadow)"/>
-        <!-- Leather Stitching Lines -->
-        <path d="M80 14 L145 36 V122 C145 160 80 193 80 193 C80 193 15 160 15 122 V36 Z" fill="none" stroke="#524332" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <!-- INSIDE DRAWER PROPS (COFFEE STAIN & LEATHER POLICE BADGE) -->
+    <div class="wood-drawer-props-layer" aria-hidden="true">
+      
+      <!-- DRIED COFFEE STAIN INSIDE DRAWER -->
+      <div class="drawer-coffee-stain"></div>
+      <div class="drawer-coffee-stain-secondary"></div>
 
-        <!-- Gold Metal Badge Shield -->
-        <path d="M80 22 L136 40 V115 C136 148 80 178 80 178 C80 178 24 148 24 115 V40 Z" fill="url(#realGoldBadgeGrad)" stroke="#4d3b08" stroke-width="3"/>
-        <path d="M80 28 L130 45 V112 C130 142 80 170 80 170 C80 170 30 142 30 112 V45 Z" fill="none" stroke="#fff3b0" stroke-width="1.5"/>
+      <!-- EXTREMELY REALISTIC POLICE DETECTIVE BADGE -->
+      <div class="drawer-prop-badge">
+        <svg viewBox="0 0 160 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Black Leather Badge Holder Cutout Backing -->
+          <path d="M80 8 L152 32 V125 C152 168 80 202 80 202 C80 202 8 168 8 125 V32 Z" fill="#14110d" stroke="#050403" stroke-width="4" filter="url(#leatherShadow)"/>
+          <!-- Leather Stitching Lines -->
+          <path d="M80 14 L145 36 V122 C145 160 80 193 80 193 C80 193 15 160 15 122 V36 Z" fill="none" stroke="#524332" stroke-width="1.8" stroke-dasharray="4 3"/>
 
-        <!-- Badge Header Scroll Banner -->
-        <path d="M42 52 Q 80 44 118 52 L114 66 Q 80 58 46 66 Z" fill="url(#realSilverGrad)" stroke="#333" stroke-width="1"/>
-        <text x="80" y="61" font-family="'Oswald', sans-serif" font-size="8.5" font-weight="bold" fill="#1a1408" text-anchor="middle" letter-spacing="1.2">SPECIAL DETECTIVE</text>
+          <!-- Gold Metal Badge Shield -->
+          <path d="M80 22 L136 40 V115 C136 148 80 178 80 178 C80 178 24 148 24 115 V40 Z" fill="url(#realGoldBadgeGrad)" stroke="#4d3b08" stroke-width="3"/>
+          <path d="M80 28 L130 45 V112 C130 142 80 170 80 170 C80 170 30 142 30 112 V45 Z" fill="none" stroke="#fff3b0" stroke-width="1.5"/>
 
-        <!-- Central 7-Point Officer Star Emblem -->
-        <g filter="url(#starEmblemShadow)">
-          <polygon points="80,70 85,86 102,86 89,97 94,113 80,103 66,113 71,97 58,86 75,86" fill="url(#realSilverGrad)" stroke="#222" stroke-width="1"/>
-          <circle cx="80" cy="94" r="11" fill="url(#realGoldBadgeGrad)" stroke="#3d2c04" stroke-width="1"/>
-          <!-- Police Shield Seal Center Symbol -->
-          <path d="M80 87 L86 90 V95 C86 99 80 101 80 101 C80 101 74 99 74 95 V90 Z" fill="#b80909"/>
-        </g>
+          <!-- Badge Header Scroll Banner -->
+          <path d="M42 52 Q 80 44 118 52 L114 66 Q 80 58 46 66 Z" fill="url(#realSilverGrad)" stroke="#333" stroke-width="1"/>
+          <text x="80" y="61" font-family="'Oswald', sans-serif" font-size="8.5" font-weight="bold" fill="#1a1408" text-anchor="middle" letter-spacing="1.2">SPECIAL DETECTIVE</text>
 
-        <!-- Bottom ID Banner -->
-        <path d="M38 128 Q 80 120 122 128 L118 144 Q 80 136 42 144 Z" fill="url(#realSilverGrad)" stroke="#333" stroke-width="1"/>
-        <text x="80" y="138" font-family="'Courier Prime', monospace" font-size="9" font-weight="bold" fill="#0f0c07" text-anchor="middle" letter-spacing="1.5">BADGE #804</text>
-        <text x="80" y="158" font-family="'Oswald', sans-serif" font-size="8" font-weight="bold" fill="#3b2b04" text-anchor="middle" letter-spacing="1">BANGALORE PD</text>
+          <!-- Central 7-Point Officer Star Emblem -->
+          <g filter="url(#starEmblemShadow)">
+            <polygon points="80,70 85,86 102,86 89,97 94,113 80,103 66,113 71,97 58,86 75,86" fill="url(#realSilverGrad)" stroke="#222" stroke-width="1"/>
+            <circle cx="80" cy="94" r="11" fill="url(#realGoldBadgeGrad)" stroke="#3d2c04" stroke-width="1"/>
+            <!-- Police Shield Seal Center Symbol -->
+            <path d="M80 87 L86 90 V95 C86 99 80 101 80 101 C80 101 74 99 74 95 V90 Z" fill="#b80909"/>
+          </g>
 
-        <!-- Gradients & Filter Definitions -->
-        <defs>
-          <linearGradient id="realGoldBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#fff0aa"/>
-            <stop offset="25%" stop-color="#e6c244"/>
-            <stop offset="55%" stop-color="#b88d19"/>
-            <stop offset="85%" stop-color="#d4af37"/>
-            <stop offset="100%" stop-color="#4d3905"/>
-          </linearGradient>
-          <linearGradient id="realSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff"/>
-            <stop offset="50%" stop-color="#cccccc"/>
-            <stop offset="100%" stop-color="#777777"/>
-          </linearGradient>
-          <filter id="leatherShadow" x="-20%" y="-20%" width="150%" height="150%">
-            <feDropShadow dx="6" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.85"/>
-          </filter>
-          <filter id="starEmblemShadow" x="-20%" y="-20%" width="150%" height="150%">
-            <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
-          </filter>
-        </defs>
-      </svg>
+          <!-- Bottom ID Banner -->
+          <path d="M38 128 Q 80 120 122 128 L118 144 Q 80 136 42 144 Z" fill="url(#realSilverGrad)" stroke="#333" stroke-width="1"/>
+          <text x="80" y="138" font-family="'Courier Prime', monospace" font-size="9" font-weight="bold" fill="#0f0c07" text-anchor="middle" letter-spacing="1.5">BADGE #804</text>
+          <text x="80" y="158" font-family="'Oswald', sans-serif" font-size="8" font-weight="bold" fill="#3b2b04" text-anchor="middle" letter-spacing="1">BANGALORE PD</text>
+
+          <!-- Gradients & Filter Definitions -->
+          <defs>
+            <linearGradient id="realGoldBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff0aa"/>
+              <stop offset="25%" stop-color="#e6c244"/>
+              <stop offset="55%" stop-color="#b88d19"/>
+              <stop offset="85%" stop-color="#d4af37"/>
+              <stop offset="100%" stop-color="#4d3905"/>
+            </linearGradient>
+            <linearGradient id="realSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="50%" stop-color="#cccccc"/>
+              <stop offset="100%" stop-color="#777777"/>
+            </linearGradient>
+            <filter id="leatherShadow" x="-20%" y="-20%" width="150%" height="150%">
+              <feDropShadow dx="6" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.85"/>
+            </filter>
+            <filter id="starEmblemShadow" x="-20%" y="-20%" width="150%" height="150%">
+              <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+
     </div>
 
-  </div>
-
-  <main class="viewport-container">
-    
-    <div class="police-folder-wrapper">
+    <!-- MAIN FILE VIEWPORT RESTING INSIDE THE DRAWER -->
+    <main class="viewport-container">
       
-      <!-- TOP FILE FOLDER TABS (Hidden until unsealed) -->
-      <nav class="folder-top-tabs hidden" id="folder-tabs-nav">
-        <button class="tab-btn active" data-target="tab-cover" id="tab-btn-cover">CASE FILE</button>
-        <button class="tab-btn" data-target="tab-rsvp" id="tab-btn-rsvp">RSVP</button>
-        <button class="tab-btn" data-target="tab-artifacts" id="tab-btn-artifacts">MUGSHOTS</button>
-      </nav>
-
-      <!-- BROWN POLICE FOLDER BODY -->
-      <article class="police-folder" id="police-case-file">
+      <div class="police-folder-wrapper">
         
-        <!-- BASE BACK FOLDER SURFACE (HOLDS INSIDE DOSSIER PAGES) -->
-        <div class="folder-base-back">
-          <div class="folder-spine-crease" aria-hidden="true"></div>
+        <!-- TOP FILE FOLDER TABS (Hidden until unsealed) -->
+        <nav class="folder-top-tabs hidden" id="folder-tabs-nav">
+          <button class="tab-btn active" data-target="tab-cover" id="tab-btn-cover">CASE FILE</button>
+          <button class="tab-btn" data-target="tab-rsvp" id="tab-btn-rsvp">RSVP</button>
+          <button class="tab-btn" data-target="tab-artifacts" id="tab-btn-artifacts">MUGSHOTS</button>
+        </nav>
+
+        <!-- BROWN POLICE FOLDER BODY -->
+        <article class="police-folder" id="police-case-file">
           
-          <!-- ==================================================================
-               TAB 1: INSIDE STORY PAGE ("Sanity Stolen" Incident Report)
-               ================================================================== -->
-          <div class="inside-paper-page active-page" id="view-story">
+          <!-- BASE BACK FOLDER SURFACE (HOLDS INSIDE DOSSIER PAGES) -->
+          <div class="folder-base-back">
+            <div class="folder-spine-crease" aria-hidden="true"></div>
             
-            <div class="paper-header">
-              <span class="paper-header-title">INCIDENT DOSSIER // CLASSIFIED LEVEL-5</span>
-              <span class="paper-file-id">CASE ID: BND-2026-0807</span>
+            <!-- ==================================================================
+                 TAB 1: INSIDE STORY PAGE ("Sanity Stolen" Incident Report)
+                 ================================================================== -->
+            <div class="inside-paper-page active-page" id="view-story">
+              
+              <div class="paper-header">
+                <span class="paper-header-title">INCIDENT DOSSIER // CLASSIFIED LEVEL-5</span>
+                <span class="paper-file-id">CASE ID: BND-2026-0807</span>
+              </div>
+
+              <div class="incident-story-box">
+                <div class="story-heading">SPECIAL INVESTIGATION BRIEFING</div>
+                
+                <p class="story-paragraph">
+                  On 7th August 2026 at exactly 2000 HRS, an official incident report was logged at the 
+                  <strong>Bangalore North Directorate</strong>. Primary intelligence confirms that all remaining sanity has been officially declared 
+                  <span class="highlighter-mark">STOLEN & UNRECOVERABLE</span>.
+                </p>
+
+                <p class="story-paragraph">
+                  Surveillance evidence confirms an illegal assembly of high-profile personnel. 
+                  The prime suspect has ordered all designated agents and operatives to assemble for an urgent operation.
+                </p>
+
+                <div class="highlight-text" style="border-left-color: var(--stamp-red); background: rgba(187, 10, 10, 0.08); padding: 0.8rem; font-weight: 700;">
+                  MANDATORY DIRECTIVE: Your dossier record has been flagged in confiscated evidence. 
+                  Your presence at the rendezvous point is <span class="highlighter-mark">MANDATORY</span>.
+                </div>
+
+                <!-- Event Details Grid Inside Paper -->
+                <div class="event-brief-grid">
+                  <div class="brief-item">
+                    <span class="brief-label">DATE OF CRIME (DOC)</span>
+                    <span class="brief-val"><span class="highlighter-mark">7th August 2026</span></span>
+                  </div>
+
+                  <div class="brief-item">
+                    <span class="brief-label">REPORT TIME (TOC)</span>
+                    <span class="brief-val"><span class="highlighter-mark">2000 HRS IST</span></span>
+                  </div>
+
+                  <div class="brief-item" style="grid-column: span 2;">
+                    <span class="brief-label">RENDEZVOUS LOCATION</span>
+                    <span class="brief-val">
+                      <a href="https://share.google/FQAt0ibwekncuCDnz" target="_blank" rel="noopener" class="location-link">
+                        [ VIEW RENDEZVOUS MAP ]
+                      </a>
+                    </span>
+                  </div>
+
+                  <div class="brief-item" style="grid-column: span 2;">
+                    <span class="brief-label">REQUIRED DRESS CODE</span>
+                    <span class="brief-val"><span class="highlighter-mark">Dress like a white collar criminal</span></span>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="incident-story-box">
-              <div class="story-heading">SPECIAL INVESTIGATION BRIEFING</div>
+            <!-- ==================================================================
+                 TAB 2: RSVP PAGE (Suspect Statement Form)
+                 ================================================================== -->
+            <div class="inside-paper-page" id="view-rsvp">
               
-              <p class="story-paragraph">
-                On 7th August 2026 at exactly 2000 HRS, an official incident report was logged at the 
-                <strong>Bangalore North Directorate</strong>. Primary intelligence confirms that all remaining sanity has been officially declared 
-                <span class="highlighter-mark">STOLEN & UNRECOVERABLE</span>.
-              </p>
-
-              <p class="story-paragraph">
-                Surveillance evidence confirms an illegal assembly of high-profile personnel. 
-                The prime suspect has ordered all designated agents and operatives to assemble for an urgent operation.
-              </p>
-
-              <div class="highlight-text" style="border-left-color: var(--stamp-red); background: rgba(187, 10, 10, 0.08); padding: 0.8rem; font-weight: 700;">
-                MANDATORY DIRECTIVE: Your dossier record has been flagged in confiscated evidence. 
-                Your presence at the rendezvous point is <span class="highlighter-mark">MANDATORY</span>.
+              <div class="paper-header">
+                <span class="paper-header-title">FORM BND-RSVP // SUSPECT STATEMENT</span>
+                <span class="paper-file-id">OFFICIAL SUBMISSION</span>
               </div>
 
-              <!-- Event Details Grid Inside Paper -->
-              <div class="event-brief-grid">
-                <div class="brief-item">
-                  <span class="brief-label">DATE OF CRIME (DOC)</span>
-                  <span class="brief-val"><span class="highlighter-mark">7th August 2026</span></span>
+              <form class="rsvp-form-container" id="rsvp-form" onsubmit="handleRSVPSubmit(event)">
+                <p class="rsvp-instruction">
+                  Complete and log your official suspect statement below for the Directorate record.
+                </p>
+
+                <div class="form-group">
+                  <label class="form-label" for="suspect-alias">SUSPECT NAME:</label>
+                  <input type="text" id="suspect-alias" class="form-input" placeholder="Enter Full Name / Alias" required>
                 </div>
 
-                <div class="brief-item">
-                  <span class="brief-label">REPORT TIME (TOC)</span>
-                  <span class="brief-val"><span class="highlighter-mark">2000 HRS IST</span></span>
+                <div class="form-group">
+                  <label class="form-label">ATTENDANCE ACKNOWLEDGEMENT:</label>
+                  <div class="rsvp-status-options">
+                    <label class="radio-option">
+                      <input type="radio" name="rsvp-status" value="CONFIRMED ATTENDANCE" checked>
+                      <span>CONFIRM ATTENDANCE (Reporting for Duty)</span>
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="rsvp-status" value="DECLINED ATTENDANCE">
+                      <span>DECLINE ATTENDANCE (Fleeing the Jurisdiction)</span>
+                    </label>
+                  </div>
                 </div>
 
-                <div class="brief-item" style="grid-column: span 2;">
-                  <span class="brief-label">RENDEZVOUS LOCATION</span>
-                  <span class="brief-val">
-                    <a href="https://share.google/FQAt0ibwekncuCDnz" target="_blank" rel="noopener" class="location-link">
-                      [ VIEW RENDEZVOUS MAP ]
-                    </a>
-                  </span>
+                <div class="form-group">
+                  <label class="form-label" for="alibi-statement">STATEMENT / ALIBI (OPTIONAL):</label>
+                  <textarea id="alibi-statement" class="form-textarea" rows="3" placeholder="Enter statement or alibi for the official file..."></textarea>
                 </div>
 
-                <div class="brief-item" style="grid-column: span 2;">
-                  <span class="brief-label">REQUIRED DRESS CODE</span>
-                  <span class="brief-val"><span class="highlighter-mark">Dress like a white collar criminal</span></span>
+                <button type="submit" class="submit-rsvp-btn" id="submit-rsvp-btn">SUBMIT TO DIRECTORATE</button>
+                
+                <div class="rsvp-success-stamp" id="rsvp-success-stamp">
+                  STATEMENT LOGGED // ATTENDANCE ACKNOWLEDGED
                 </div>
+              </form>
+
+            </div>
+
+            <!-- ==================================================================
+                 TAB 3: MUGSHOTS PAGE (Evidence Board & Threads)
+                 ================================================================== -->
+            <div class="inside-paper-page" id="view-artifacts">
+              
+              <div class="artifacts-header-actions">
+                <div>
+                  <div class="paper-header-title">MUGSHOTS WALL // EVIDENCE GALLERY</div>
+                  <div class="paper-file-id">PINNED EVIDENCE & RED THREAD MATRIX</div>
+                </div>
+                
+                <button class="download-all-btn" id="download-all-btn" onclick="downloadAllPolaroids()">
+                  DOWNLOAD ALL MUGSHOTS
+                </button>
               </div>
+
+              <!-- EVIDENCE WALL CORKBOARD BOARD -->
+              <div class="evidence-wall-board" id="evidence-wall-board">
+                
+                <!-- SVG SOLID REAL RED YARN THREAD LAYER WITH SHADOW -->
+                <svg class="red-thread-svg" id="red-thread-svg">
+                  <path id="red-thread-path" d="" stroke="#e61919" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none" style="filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.85));" />
+                </svg>
+
+                <!-- POLAROIDS / MUGSHOTS GRID -->
+                <div class="polaroids-grid" id="polaroids-grid">
+                  
+                  <!-- STARTER POLAROID (UPLOAD TRIGGER) -->
+                  <div class="polaroid-card starter-card" id="starter-polaroid-card" onclick="triggerPhotoUpload()">
+                    <div class="pushpin"></div>
+                    <div class="polaroid-img-box">
+                      <div class="starter-upload-zone">
+                        <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">[ + ADD MUGSHOT ]</span>
+                      </div>
+                    </div>
+                    <div class="starter-caption">Pin your mugshot here</div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- HIDDEN FILE INPUT -->
+              <input type="file" id="polaroid-file-input" accept="image/*" multiple onchange="handlePhotoUpload(event)">
 
             </div>
 
           </div>
 
           <!-- ==================================================================
-               TAB 2: RSVP PAGE (Suspect Statement Form)
+               FRONT COVER HINGED FLAP (FLIPS 180° TO OPEN THE FILE)
                ================================================================== -->
-          <div class="inside-paper-page" id="view-rsvp">
+          <div class="folder-front-flap" id="folder-front-flap">
             
-            <div class="paper-header">
-              <span class="paper-header-title">FORM BND-RSVP // SUSPECT STATEMENT</span>
-              <span class="paper-file-id">OFFICIAL SUBMISSION</span>
+            <!-- Yellow Crime Scene Caution Tape Banner -->
+            <div class="crime-tape-banner" aria-hidden="true">
+              CRIME SCENE — DO NOT CROSS — POLICE DEPT —
             </div>
 
-            <form class="rsvp-form-container" id="rsvp-form" onsubmit="handleRSVPSubmit(event)">
-              <p class="rsvp-instruction">
-                Complete and log your official suspect statement below for the Directorate record.
-              </p>
+            <!-- Paper Clip Decor -->
+            <div class="paper-clip" aria-hidden="true"></div>
 
-              <div class="form-group">
-                <label class="form-label" for="suspect-alias">SUSPECT NAME:</label>
-                <input type="text" id="suspect-alias" class="form-input" placeholder="Enter Full Name / Alias" required>
-              </div>
+            <!-- Coffee Stain Ring Graphic -->
+            <div class="coffee-stain" aria-hidden="true"></div>
 
-              <div class="form-group">
-                <label class="form-label">ATTENDANCE ACKNOWLEDGEMENT:</label>
-                <div class="rsvp-status-options">
-                  <label class="radio-option">
-                    <input type="radio" name="rsvp-status" value="CONFIRMED ATTENDANCE" checked>
-                    <span>CONFIRM ATTENDANCE (Reporting for Duty)</span>
-                  </label>
-                  <label class="radio-option">
-                    <input type="radio" name="rsvp-status" value="DECLINED ATTENDANCE">
-                    <span>DECLINE ATTENDANCE (Fleeing the Jurisdiction)</span>
-                  </label>
-                </div>
-              </div>
+            <!-- BIG RED CONFIDENTIAL STAMP -->
+            <div class="stamp-confidential" id="stamp-confidential">
+              CONFIDENTIAL
+            </div>
 
-              <div class="form-group">
-                <label class="form-label" for="alibi-statement">STATEMENT / ALIBI (OPTIONAL):</label>
-                <textarea id="alibi-statement" class="form-textarea" rows="3" placeholder="Enter statement or alibi for the official file..."></textarea>
-              </div>
+            <!-- Directorate Header -->
+            <header class="directorate-header">
+              <!-- Police Badge SVG Emblem -->
+              <svg class="police-badge-icon" viewBox="0 0 24 24" fill="none" stroke="#221a12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"/>
+                <polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 16 9 17.5 9.5 14 7 11.5 10.5 11"/>
+              </svg>
+              <div class="police-seal">POLICE DEPARTMENT</div>
+              <h1 class="directorate-title" id="directorate-title">BANGALORE NORTH DIRECTORATE</h1>
+              <div class="sub-dept">INVESTIGATION & CASE DOSSIER DIVISION</div>
+            </header>
 
-              <button type="submit" class="submit-rsvp-btn" id="submit-rsvp-btn">SUBMIT TO DIRECTORATE</button>
+            <!-- Case Details Block -->
+            <section class="case-details-block" id="case-details-block">
               
-              <div class="rsvp-success-stamp" id="rsvp-success-stamp">
-                STATEMENT LOGGED // ATTENDANCE ACKNOWLEDGED
+              <div class="detail-row">
+                <span class="detail-label">CASE TITLE:</span>
+                <span class="detail-value case-name" id="case-title-val">Sanity Stolen</span>
               </div>
-            </form>
 
-          </div>
-
-          <!-- ==================================================================
-               TAB 3: MUGSHOTS PAGE (Evidence Board & Threads)
-               ================================================================== -->
-          <div class="inside-paper-page" id="view-artifacts">
-            
-            <div class="artifacts-header-actions">
-              <div>
-                <div class="paper-header-title">MUGSHOTS WALL // EVIDENCE GALLERY</div>
-                <div class="paper-file-id">PINNED EVIDENCE & RED THREAD MATRIX</div>
+              <div class="detail-row">
+                <span class="detail-label">DATE OF CRIME (DOC):</span>
+                <span class="detail-value" id="doc-val">7/08/2026</span>
               </div>
-              
-              <button class="download-all-btn" id="download-all-btn" onclick="downloadAllPolaroids()">
-                DOWNLOAD ALL MUGSHOTS
+
+              <div class="detail-row">
+                <span class="detail-label">TIME OF CRIME (TOC):</span>
+                <span class="detail-value" id="toc-val">2000 HRS</span>
+              </div>
+
+            </section>
+
+            <!-- REALISTIC STRING TIE & BUTTON UNSEAL FASTENER -->
+            <div class="open-folder-cta-wrapper">
+              <div class="string-fastener-visual" aria-hidden="true">
+                <div class="string-button"></div>
+                <div class="string-line" id="string-line"></div>
+                <div class="string-button"></div>
+              </div>
+              <button class="open-folder-btn" id="open-folder-btn">
+                [ UNSEAL CASE FILE ]
               </button>
             </div>
 
-            <!-- EVIDENCE WALL CORKBOARD BOARD -->
-            <div class="evidence-wall-board" id="evidence-wall-board">
-              
-              <!-- SVG SOLID REAL RED YARN THREAD LAYER WITH SHADOW -->
-              <svg class="red-thread-svg" id="red-thread-svg">
-                <path id="red-thread-path" d="" stroke="#e61919" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none" style="filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.85));" />
-              </svg>
-
-              <!-- POLAROIDS / MUGSHOTS GRID -->
-              <div class="polaroids-grid" id="polaroids-grid">
-                
-                <!-- STARTER POLAROID (UPLOAD TRIGGER) -->
-                <div class="polaroid-card starter-card" id="starter-polaroid-card" onclick="triggerPhotoUpload()">
-                  <div class="pushpin"></div>
-                  <div class="polaroid-img-box">
-                    <div class="starter-upload-zone">
-                      <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">[ + ADD MUGSHOT ]</span>
-                    </div>
-                  </div>
-                  <div class="starter-caption">Pin your mugshot here</div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- HIDDEN FILE INPUT -->
-            <input type="file" id="polaroid-file-input" accept="image/*" multiple onchange="handlePhotoUpload(event)">
-
           </div>
 
-        </div>
+        </article>
 
-        <!-- ==================================================================
-             FRONT COVER HINGED FLAP (FLIPS 180° TO OPEN THE FILE)
-             ================================================================== -->
-        <div class="folder-front-flap" id="folder-front-flap">
-          
-          <!-- Yellow Crime Scene Caution Tape Banner -->
-          <div class="crime-tape-banner" aria-hidden="true">
-            CRIME SCENE — DO NOT CROSS — POLICE DEPT —
-          </div>
+      </div>
 
-          <!-- Paper Clip Decor -->
-          <div class="paper-clip" aria-hidden="true"></div>
+    </main>
 
-          <!-- Coffee Stain Ring Graphic -->
-          <div class="coffee-stain" aria-hidden="true"></div>
-
-          <!-- BIG RED CONFIDENTIAL STAMP -->
-          <div class="stamp-confidential" id="stamp-confidential">
-            CONFIDENTIAL
-          </div>
-
-          <!-- Directorate Header -->
-          <header class="directorate-header">
-            <!-- Police Badge SVG Emblem -->
-            <svg class="police-badge-icon" viewBox="0 0 24 24" fill="none" stroke="#221a12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"/>
-              <polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 16 9 17.5 9.5 14 7 11.5 10.5 11"/>
-            </svg>
-            <div class="police-seal">POLICE DEPARTMENT</div>
-            <h1 class="directorate-title" id="directorate-title">BANGALORE NORTH DIRECTORATE</h1>
-            <div class="sub-dept">INVESTIGATION & CASE DOSSIER DIVISION</div>
-          </header>
-
-          <!-- Case Details Block -->
-          <section class="case-details-block" id="case-details-block">
-            
-            <div class="detail-row">
-              <span class="detail-label">CASE TITLE:</span>
-              <span class="detail-value case-name" id="case-title-val">Sanity Stolen</span>
-            </div>
-
-            <div class="detail-row">
-              <span class="detail-label">DATE OF CRIME (DOC):</span>
-              <span class="detail-value" id="doc-val">7/08/2026</span>
-            </div>
-
-            <div class="detail-row">
-              <span class="detail-label">TIME OF CRIME (TOC):</span>
-              <span class="detail-value" id="toc-val">2000 HRS</span>
-            </div>
-
-          </section>
-
-          <!-- REALISTIC STRING TIE & BUTTON UNSEAL FASTENER -->
-          <div class="open-folder-cta-wrapper">
-            <div class="string-fastener-visual" aria-hidden="true">
-              <div class="string-button"></div>
-              <div class="string-line" id="string-line"></div>
-              <div class="string-button"></div>
-            </div>
-            <button class="open-folder-btn" id="open-folder-btn">
-              [ UNSEAL CASE FILE ]
-            </button>
-          </div>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </main>
+  </div>
 
   <!-- Interactive Folder & Real 3D Page Flip Logic -->
   <script>
