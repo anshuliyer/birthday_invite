@@ -1,8 +1,8 @@
 /* ==========================================================================
-   BANGALORE NORTH DIRECTORATE - HYPER SUPER DUPER REALISTIC MANILA CASE FILE
+   BANGALORE NORTH DIRECTORATE - HANDWRITTEN & TYPED REALISTIC CASE FILE
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&family=Special+Elite&display=swap');
 
 :root {
   /* Serious Police Palette */
@@ -13,15 +13,16 @@
   --paper-inside: #f5f0e6;
   --paper-border: #241c14;
   --ink-black: #18120c;
+  --ink-blue: #163056; /* Authentic Blue Ballpoint Pen Ink */
   --stamp-red: #bb0a0a;
   --agency-gold: #aa8039;
   --highlighter-yellow: rgba(253, 224, 71, 0.85);
   
   /* Fonts */
+  --font-handwriting: 'Caveat', cursive;
   --font-typewriter: 'Courier Prime', monospace;
   --font-stamp: 'Special Elite', monospace;
   --font-header: 'Oswald', sans-serif;
-  --font-sans: 'Inter', sans-serif;
 }
 
 /* Reset & Viewport Setup */
@@ -55,6 +56,38 @@ body {
       transparent 2px,
       transparent 12px
     );
+}
+
+/* HANDWRITTEN vs. TYPED UTILITY CLASSES */
+.handwritten-blue {
+  font-family: var(--font-handwriting) !important;
+  font-size: 1.45rem !important;
+  color: var(--ink-blue) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  transform: rotate(-0.5deg);
+  display: inline-block;
+}
+
+.handwritten-ink {
+  font-family: var(--font-handwriting) !important;
+  font-size: 1.35rem !important;
+  color: #111111 !important;
+  font-weight: 700 !important;
+  transform: rotate(-0.4deg);
+  display: inline-block;
+}
+
+.handwritten-note {
+  font-family: var(--font-handwriting) !important;
+  font-size: 1.2rem !important;
+  color: #2b456e !important;
+  font-weight: 700 !important;
+  transform: rotate(-1.5deg);
+}
+
+.typed-text {
+  font-family: var(--font-typewriter) !important;
 }
 
 /* MOBILE-FIRST CASE FILE CONTAINER */
@@ -129,7 +162,6 @@ body {
 .folder-base-back {
   width: 100%;
   min-height: 590px;
-  /* Fibrous Cardboard Texture & Weathered Edge Gradients */
   background: 
     radial-gradient(circle at 90% 10%, rgba(120, 80, 30, 0.25) 0%, transparent 40%),
     radial-gradient(circle at 10% 90%, rgba(70, 40, 10, 0.2) 0%, transparent 45%),
@@ -138,14 +170,13 @@ body {
   border-radius: 8px 34px 6px 6px;
   box-shadow: 
     0 22px 50px var(--folder-shadow),
-    inset 0 0 35px rgba(70, 45, 15, 0.35); /* Worn Cardboard Edge Shadow */
+    inset 0 0 35px rgba(70, 45, 15, 0.35);
   padding: 2.6rem 1.8rem 2.2rem 1.8rem;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-/* 3D DOUBLE-GROOVE FOLDER SPINE CREASE */
 .folder-spine-crease {
   position: absolute;
   top: 0;
@@ -157,7 +188,6 @@ body {
   pointer-events: none;
 }
 
-/* BRASS PAPER FASTENER GROMMETS ALONG SPINE */
 .brass-grommet {
   position: absolute;
   left: 10px;
@@ -172,7 +202,7 @@ body {
 .grommet-top { top: 35px; }
 .grommet-bottom { bottom: 35px; }
 
-/* FRONT COVER HINGED FLAP WITH 180° FLIP & REAL WEAR AND TEAR */
+/* FRONT COVER HINGED FLAP */
 .folder-front-flap {
   position: absolute;
   top: 0;
@@ -180,7 +210,6 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  /* Aged Manila Cardboard Grain & Water Stains */
   background: 
     radial-gradient(circle at 85% 15%, rgba(90, 55, 15, 0.25) 0%, transparent 35%),
     radial-gradient(circle at 20% 80%, rgba(120, 80, 25, 0.2) 0%, transparent 40%),
@@ -201,7 +230,6 @@ body {
   justify-content: space-between;
 }
 
-/* REALISTIC 3D DOG-EAR BENT CORNER FOLD ON COVER FLAP */
 .folder-front-flap::before {
   content: '';
   position: absolute;
@@ -216,14 +244,13 @@ body {
   z-index: 25;
 }
 
-/* OPENED STATE: Cover Flap Rotates -180 Degrees horizontally to the left! */
 .police-folder.is-unsealed .folder-front-flap {
   transform: rotateY(-180deg);
   pointer-events: none;
   opacity: 0;
 }
 
-/* Official Frayed Caution Evidence Tape Strip */
+/* Caution Tape */
 .crime-tape-banner {
   position: absolute;
   top: 20px;
@@ -243,7 +270,6 @@ body {
   user-select: none;
 }
 
-/* Dried Coffee Ring Stain Graphic */
 .coffee-stain {
   position: absolute;
   bottom: 22px;
@@ -255,10 +281,8 @@ body {
   pointer-events: none;
   filter: blur(1px);
   transform: scaleY(0.85) rotate(15deg);
-  box-shadow: inset 0 0 10px rgba(70, 45, 18, 0.15);
 }
 
-/* Chrome Paper Clip Accent */
 .paper-clip {
   position: absolute;
   top: -14px;
@@ -269,10 +293,9 @@ body {
   border-radius: 10px;
   z-index: 15;
   transform: rotate(6deg);
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-/* DUAL INK RUBBER STAMPS */
+/* STAMPS */
 .stamp-confidential {
   position: absolute;
   top: 1.2rem;
@@ -281,16 +304,13 @@ body {
   font-size: clamp(1.6rem, 5.2vw, 2.2rem);
   font-weight: 700;
   color: var(--stamp-red);
-  border: 3px.5px solid var(--stamp-red);
   border: 3.5px solid var(--stamp-red);
   padding: 0.25rem 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   transform: rotate(-7deg);
   opacity: 0.92;
-  user-select: none;
   pointer-events: none;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
 }
 
 .stamp-secondary {
@@ -324,13 +344,11 @@ body {
   border: 1px solid var(--ink-black);
   padding: 0.4rem;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .police-badge-icon {
   width: 32px;
   height: 32px;
-  display: block;
 }
 
 .police-seal {
@@ -388,11 +406,6 @@ body {
 }
 
 .detail-value {
-  font-family: var(--font-typewriter);
-  font-size: clamp(1.05rem, 3.6vw, 1.35rem);
-  font-weight: 700;
-  color: var(--ink-black);
-  letter-spacing: 0.05em;
   background: #ffffff;
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--ink-black);
@@ -402,17 +415,15 @@ body {
 }
 
 .detail-value.case-name {
-  color: var(--stamp-red);
+  color: var(--stamp-red) !important;
 }
 
 .location-link {
-  color: var(--stamp-red);
   text-decoration: none;
-  border-bottom: 2px solid var(--stamp-red);
-  font-weight: 700;
+  border-bottom: 2px solid var(--ink-blue);
 }
 
-/* REALISTIC MANILA STRING TIE & DISK FASTENER */
+/* STRING TIE */
 .open-folder-cta-wrapper {
   display: flex;
   flex-direction: column;
@@ -436,7 +447,6 @@ body {
   background: radial-gradient(circle at 35% 35%, #7a552b 0%, #3b2611 90%);
   border: 1.5px solid var(--ink-black);
   border-radius: 50%;
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,7 +464,6 @@ body {
   width: 3.5px;
   height: 22px;
   background: var(--stamp-red);
-  box-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.35);
 }
 
 .open-folder-btn {
@@ -476,10 +485,9 @@ body {
 .open-folder-btn:hover {
   background: #d40d0d;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(187, 10, 10, 0.5);
 }
 
-/* PHYSICAL HIGHLIGHTER MARKER STROKE EFFECT */
+/* HIGHLIGHTER MARKER */
 .highlighter-mark {
   background: linear-gradient(
     104deg, 
@@ -491,8 +499,6 @@ body {
     rgba(253, 224, 71, 0) 98%
   );
   padding: 0.1em 0.4em;
-  color: #0d0a07;
-  font-weight: 700;
   display: inline-block;
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -503,7 +509,7 @@ body {
   background-size: 100% 100%;
 }
 
-/* INSIDE PAGES (Opened Dossier Sheet) */
+/* INSIDE PAGES */
 .inside-paper-page {
   background: var(--paper-inside);
   border: 1px solid var(--ink-black);
@@ -568,8 +574,6 @@ body {
 
 .paper-file-id {
   font-size: 0.68rem;
-  color: #5c4731;
-  font-weight: 700;
 }
 
 /* TAB 1: STORY */
@@ -596,15 +600,13 @@ body {
   background: rgba(187, 10, 10, 0.08);
   border-left: 4px solid var(--stamp-red);
   padding: 0.8rem;
-  font-weight: 700;
   margin-top: 0.4rem;
 }
 
 .directive-stamp {
   color: var(--stamp-red);
-  font-family: var(--font-header);
+  font-weight: 700;
   letter-spacing: 0.1em;
-  margin-right: 0.3rem;
 }
 
 .event-brief-grid {
@@ -619,7 +621,6 @@ body {
 }
 
 .brief-label { font-size: 0.68rem; font-weight: 700; color: var(--stamp-red); }
-.brief-val { font-size: 0.92rem; font-weight: 700; }
 
 /* TAB 2: RSVP */
 .rsvp-form-container {
@@ -637,8 +638,6 @@ body {
   background: #ffffff;
   border: 1px solid var(--ink-black);
   padding: 0.65rem 0.8rem;
-  font-family: var(--font-typewriter);
-  font-size: 0.9rem;
   border-radius: 2px;
 }
 
@@ -648,7 +647,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  font-size: 0.88rem;
   background: #ffffff;
   padding: 0.65rem 0.8rem;
   border: 1px solid var(--ink-black);
@@ -673,9 +671,7 @@ body {
   padding: 0.8rem;
   border: 2.5px dashed var(--stamp-red);
   color: var(--stamp-red);
-  font-family: var(--font-stamp);
   text-align: center;
-  font-size: 1rem;
 }
 
 /* TAB 3: MUGSHOTS WALL */
@@ -764,13 +760,11 @@ body {
 }
 
 .starter-caption {
-  font-size: 0.95rem;
   font-weight: 700;
   color: var(--stamp-red);
 }
 
 .polaroid-caption {
-  font-size: 0.9rem;
   font-weight: 700;
   margin-top: 0.5rem;
   text-align: center;
