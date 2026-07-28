@@ -7,7 +7,7 @@
   <title>BANGALORE NORTH DIRECTORATE // CASE FILE: SANITY STOLEN</title>
   
   <!-- CSS Stylesheet (Versioned to bypass browser cache) -->
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 
@@ -33,7 +33,49 @@
       <div class="drawer-coffee-stain"></div>
       <div class="drawer-coffee-stain-secondary"></div>
 
-      <!-- 2. STEEL HANDCUFFS (TOP LEFT IN DRAWER) -->
+      <!-- 2. HARDCOVER "LAW & ORDER" LEATHER BOUND BOOK (RIGHT SIDE IN DRAWER) -->
+      <div class="drawer-prop prop-law-book">
+        <div class="law-book-spine"></div>
+        <div class="law-book-cover">
+          <div class="law-book-gold-seal">⚖️</div>
+          <div class="law-book-title">LAW & ORDER</div>
+          <div class="law-book-subtitle">CRIMINAL PROCEDURE CODE</div>
+          <div class="law-book-volume">VOL. IV // DIRECTORATE</div>
+        </div>
+      </div>
+
+      <!-- 3. TACTICAL POLICE FLASHLIGHT (LEFT SIDE IN DRAWER) -->
+      <div class="drawer-prop prop-flashlight">
+        <svg viewBox="0 0 160 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flashlight Body -->
+          <rect x="25" y="8" width="105" height="14" rx="3" fill="url(#torchBodyGrad)" stroke="#111" stroke-width="1.5"/>
+          <!-- Textured Grip -->
+          <line x1="45" y1="8" x2="45" y2="22" stroke="#222" stroke-width="2"/>
+          <line x1="55" y1="8" x2="55" y2="22" stroke="#222" stroke-width="2"/>
+          <line x1="65" y1="8" x2="65" y2="22" stroke="#222" stroke-width="2"/>
+          <line x1="75" y1="8" x2="75" y2="22" stroke="#222" stroke-width="2"/>
+          <!-- Flashlight Head -->
+          <polygon points="130,5 155,2 155,28 130,25" fill="url(#torchHeadGrad)" stroke="#000" stroke-width="1.5"/>
+          <!-- Glass Lens Glow -->
+          <ellipse cx="155" cy="15" rx="3" ry="13" fill="#e6f7ff" opacity="0.8"/>
+          <!-- Switch Button -->
+          <rect x="100" y="5" width="10" height="3" rx="1" fill="#cc1818"/>
+          <defs>
+            <linearGradient id="torchBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#555555"/>
+              <stop offset="50%" stop-color="#222222"/>
+              <stop offset="100%" stop-color="#050505"/>
+            </linearGradient>
+            <linearGradient id="torchHeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#777777"/>
+              <stop offset="50%" stop-color="#333333"/>
+              <stop offset="100%" stop-color="#111111"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- 4. STEEL HANDCUFFS (TOP LEFT IN DRAWER) -->
       <div class="drawer-prop prop-handcuffs">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="32" cy="45" r="22" stroke="url(#metalGrad)" stroke-width="6" fill="none"/>
@@ -50,7 +92,7 @@
         </svg>
       </div>
 
-      <!-- 3. EXTREMELY REALISTIC POLICE DETECTIVE BADGE (TOP RIGHT IN DRAWER) -->
+      <!-- 5. EXTREMELY REALISTIC POLICE DETECTIVE BADGE (TOP RIGHT IN DRAWER) -->
       <div class="drawer-prop-badge">
         <svg viewBox="0 0 160 210" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Black Leather Badge Holder Cutout Backing -->
@@ -103,7 +145,7 @@
         </svg>
       </div>
 
-      <!-- 4. POLICE BALLPOINT PEN (BOTTOM RIGHT IN DRAWER) -->
+      <!-- 6. POLICE BALLPOINT PEN (BOTTOM RIGHT IN DRAWER) -->
       <div class="drawer-prop prop-brass-pen">
         <svg viewBox="0 0 140 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="10" y="10" width="105" height="10" rx="4" fill="url(#brassPenGrad)" stroke="#3d2d05" stroke-width="1"/>
@@ -119,21 +161,12 @@
         </svg>
       </div>
 
-      <!-- 5. CRIME EVIDENCE TAG / MEMO CARD (BOTTOM LEFT IN DRAWER) -->
+      <!-- 7. CRIME EVIDENCE TAG / MEMO CARD (BOTTOM LEFT IN DRAWER) -->
       <div class="drawer-prop prop-memo-paper">
         <div class="memo-header">EVIDENCE ITEM #804</div>
         <div class="memo-line">DEPT: BANGALORE PD</div>
         <div class="memo-line">OFFICER: CHIEF DETECTIVE</div>
         <div class="memo-stamp">CLASSIFIED</div>
-      </div>
-
-      <!-- 6. POLICE METAL WHISTLE & CARTRIDGE (BOTTOM CENTER IN DRAWER) -->
-      <div class="drawer-prop prop-whistle">
-        <svg viewBox="0 0 70 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 20 L45 20 Q 60 20 60 30 Q 60 38 45 38 L10 38 Z" fill="url(#metalGrad)" stroke="#222" stroke-width="1.5"/>
-          <circle cx="18" cy="15" r="8" fill="url(#metalGrad)" stroke="#222" stroke-width="1.5"/>
-          <rect x="2" y="24" width="8" height="10" rx="1" fill="#444"/>
-        </svg>
       </div>
 
     </div>
