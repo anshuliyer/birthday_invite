@@ -6,7 +6,7 @@
 
 :root {
   /* Serious Police Desk Palette */
-  --bg-desk: #0c0a08;
+  --bg-desk: #2b1d12;
   --folder-bg: #c99b5b;
   --folder-bg-dark: #b38546;
   --folder-shadow: rgba(0, 0, 0, 0.85);
@@ -31,43 +31,41 @@
   padding: 0;
 }
 
-html, body {
+html {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--bg-desk);
+  background-color: #1a120b;
+}
+
+/* DETECTIVE'S MAHOGANY WOOD DESK BACKGROUND */
+body {
+  width: 100%;
+  min-height: 100vh;
   color: var(--ink-black);
   font-family: var(--font-typewriter);
   overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
-}
-
-/* DETECTIVE'S MAHOGANY DESK WITH OVERHEAD DESK LAMP SPOTLIGHT GLOW */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
+  
+  /* Rich Detective Wood Desk Texture & Overhead Warm Spotlight */
+  background-color: #26190f;
+  background-image: 
     /* Warm Overhead Desk Lamp Spotlight Glow */
-    radial-gradient(circle at 50% 28%, rgba(255, 215, 150, 0.12) 0%, rgba(255, 190, 100, 0.04) 45%, transparent 75%),
-    /* Dark Wood Grain Lines */
+    radial-gradient(circle at 50% 25%, rgba(255, 215, 140, 0.22) 0%, rgba(255, 180, 80, 0.08) 40%, transparent 75%),
+    /* Wood Planks & Grain Pattern */
     repeating-linear-gradient(
       90deg,
-      rgba(20, 14, 9, 0.8) 0px,
-      rgba(35, 24, 15, 0.8) 2px,
-      rgba(15, 10, 6, 0.8) 4px,
-      rgba(28, 19, 12, 0.8) 7px
+      rgba(15, 10, 6, 0.5) 0px,
+      rgba(45, 30, 18, 0.5) 3px,
+      rgba(25, 16, 9, 0.5) 6px,
+      rgba(55, 36, 22, 0.5) 10px
     ),
-    /* Rich Dark Oak Wood Texture Layer */
-    radial-gradient(ellipse at 20% 50%, rgba(45, 30, 18, 0.9) 0%, rgba(18, 12, 7, 0.95) 70%),
-    linear-gradient(180deg, #18110b 0%, #080503 100%);
-  z-index: -2;
+    /* Deep Oak Base Gradient */
+    radial-gradient(ellipse at 50% 50%, #3d2919 0%, #1a110a 70%, #0d0804 100%);
+  background-attachment: fixed;
 }
 
-/* DETECTIVE DESK SCATTERED ACCENTS (Police badge watermark & desk shadow) */
+/* Vignette Shadow Overlay */
 body::after {
   content: '';
   position: fixed;
@@ -75,11 +73,9 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    /* Vignette shadow around outer desktop edges */
-    radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+  background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0, 0, 0, 0.8) 100%);
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Viewport Container */
@@ -90,6 +86,8 @@ body::after {
   align-items: center;
   padding: 4.2rem 1rem 4rem 1rem;
   perspective: 2000px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Outer Folder Wrapper */
