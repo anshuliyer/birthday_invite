@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BANGALORE NORTH DIRECTORATE - PERFECT FOLDER & DRAWER LAYOUT
+   BANGALORE NORTH DIRECTORATE - PERFECT FOLDER & ENLARGED DRAWER PROPS
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap');
@@ -148,7 +148,7 @@ body {
 .rail-right { right: 24px; }
 
 /* ==========================================================================
-   REALISTIC WOOD DRAWER SCATTERED ARTIFACTS
+   ENLARGED REALISTIC COP DRAWER PROPS & ARTIFACTS
    ========================================================================== */
 
 .wood-drawer-props-layer {
@@ -164,120 +164,170 @@ body {
 
 .drawer-prop {
   position: absolute;
-  filter: drop-shadow(4px 10px 18px rgba(0, 0, 0, 0.85));
+  filter: drop-shadow(6px 14px 22px rgba(0, 0, 0, 0.9));
+  transition: transform 0.3s ease;
 }
 
+/* 1. DRIED COFFEE MUG STAIN */
 .drawer-coffee-stain {
   position: absolute;
   top: 45px;
   left: 45px;
-  width: 120px;
-  height: 120px;
-  border: 6px solid rgba(54, 31, 10, 0.4);
+  width: 150px;
+  height: 150px;
+  border: 7px solid rgba(54, 31, 10, 0.45);
   border-radius: 50%;
-  filter: blur(1px);
+  filter: blur(1.2px);
   transform: rotate(-15deg) scaleY(0.88);
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .drawer-coffee-stain-secondary {
   position: absolute;
   bottom: 65px;
-  right: 140px;
-  width: 95px;
-  height: 95px;
-  border: 4px solid rgba(48, 27, 8, 0.3);
+  right: 180px;
+  width: 115px;
+  height: 115px;
+  border: 5px solid rgba(48, 27, 8, 0.35);
   border-radius: 50%;
   filter: blur(1px);
-  opacity: 0.65;
+  opacity: 0.7;
 }
 
+/* 2. SIGNIFICANTLY LARGER HARDCOVER "LAW & ORDER" LEATHER BOUND BOOK */
 .prop-law-book {
-  top: 180px;
+  top: 150px;
   right: 15px;
-  width: 145px;
-  height: 190px;
+  width: 220px;
+  height: 285px;
   background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
-  border: 1.5px solid #3a4a6b;
-  border-radius: 3px 8px 8px 3px;
-  box-shadow: 8px 14px 25px rgba(0, 0, 0, 0.9);
-  padding: 0.8rem 0.6rem;
-  transform: rotate(7deg);
+  border: 2px solid #3a4a6b;
+  border-radius: 4px 10px 10px 4px;
+  box-shadow: 12px 20px 35px rgba(0, 0, 0, 0.95);
+  padding: 1.2rem 0.9rem;
+  transform: rotate(8deg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.9;
+  opacity: 0.95;
+}
+
+.law-book-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 100%;
+  background: linear-gradient(90deg, #0d131f 0%, #2c3e5e 70%, #151e2d 100%);
+  border-right: 1.5px solid #4a5c80;
+  border-radius: 4px 0 0 4px;
+}
+
+.law-book-cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1.5px solid #d4af37;
+  padding: 1.2rem 0.8rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: inset 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+.law-book-gold-seal {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .law-book-title {
   font-family: var(--font-header);
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #ffe699;
-  letter-spacing: 0.12em;
-  border-bottom: 1px solid #d4af37;
-  padding-bottom: 0.2rem;
-  margin-bottom: 0.3rem;
+  letter-spacing: 0.14em;
+  border-bottom: 1.5px solid #d4af37;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.45rem;
 }
 
-.law-book-subtitle { font-size: 0.55rem; color: #ccc; }
+.law-book-subtitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #dddddd;
+  letter-spacing: 0.1em;
+  margin-bottom: auto;
+}
 
+.law-book-volume {
+  font-size: 0.62rem;
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+/* 3. ENLARGED TACTICAL FLASHLIGHT */
 .prop-flashlight {
-  top: 180px;
+  top: 170px;
   left: 15px;
-  width: 135px;
+  width: 185px;
   transform: rotate(-72deg);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
+/* 4. ENLARGED STEEL HANDCUFFS (TOP LEFT) */
 .prop-handcuffs {
   top: 35px;
   left: 35px;
-  width: 110px;
+  width: 155px;
   transform: rotate(-22deg);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
+/* 5. ENLARGED POLICE DETECTIVE BADGE (TOP RIGHT) */
 .drawer-prop-badge {
   top: 35px;
   right: 35px;
-  width: 125px;
+  width: 170px;
   transform: rotate(14deg);
-  filter: drop-shadow(6px 12px 18px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(8px 16px 25px rgba(0, 0, 0, 0.95));
 }
 
+/* 6. ENLARGED COP BALLPOINT PEN (BOTTOM RIGHT) */
 .prop-brass-pen {
   bottom: 45px;
-  right: 35px;
-  width: 135px;
+  right: 45px;
+  width: 175px;
   transform: rotate(-18deg);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
+/* 7. ENLARGED EVIDENCE MEMO TAG (BOTTOM LEFT) */
 .prop-memo-paper {
   bottom: 40px;
   left: 20px;
-  width: 155px;
+  width: 195px;
   background: #f4ebd9;
-  border: 1px solid #2b2014;
-  padding: 0.6rem 0.7rem;
+  border: 1.5px solid #2b2014;
+  padding: 0.8rem 0.9rem;
   font-family: var(--font-typewriter);
-  box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.85);
+  box-shadow: 6px 12px 22px rgba(0, 0, 0, 0.88);
   transform: rotate(9deg);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-.memo-header { font-size: 0.65rem; font-weight: 700; color: var(--stamp-red); }
-.memo-line { font-size: 0.55rem; color: #2b2014; }
+.memo-header { font-size: 0.75rem; font-weight: 700; color: var(--stamp-red); }
+.memo-line { font-size: 0.62rem; color: #2b2014; }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .prop-law-book { display: none; }
   .prop-flashlight { display: none; }
   .prop-brass-pen { display: none; }
   .prop-memo-paper { display: none; }
-  .drawer-prop-badge { width: 95px; top: 25px; right: 15px; }
-  .prop-handcuffs { width: 85px; top: 25px; left: 15px; }
+  .drawer-prop-badge { width: 120px; top: 25px; right: 15px; }
+  .prop-handcuffs { width: 110px; top: 25px; left: 15px; }
 }
 
 /* ==========================================================================
