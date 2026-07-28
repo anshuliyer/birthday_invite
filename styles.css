@@ -1,12 +1,12 @@
 /* ==========================================================================
-   BANGALORE NORTH DIRECTORATE - SERIOUS POLICE DETECTIVE DESK BACKGROUND
+   BANGALORE NORTH DIRECTORATE - REALISTIC WOOD DRAWER BACKGROUND & BADGE
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  /* Serious Police Desk Palette */
-  --bg-desk: #2b1d12;
+  /* Serious Police Palette */
+  --bg-desk: #24160c;
   --folder-bg: #c99b5b;
   --folder-bg-dark: #b38546;
   --folder-shadow: rgba(0, 0, 0, 0.85);
@@ -17,7 +17,7 @@
   --agency-gold: #aa8039;
   --highlighter-yellow: rgba(253, 224, 71, 0.85);
   
-  /* Serious Fonts */
+  /* Fonts */
   --font-typewriter: 'Courier Prime', monospace;
   --font-stamp: 'Special Elite', monospace;
   --font-header: 'Oswald', sans-serif;
@@ -34,10 +34,10 @@
 html {
   width: 100%;
   min-height: 100vh;
-  background-color: #1a120b;
+  background-color: #140b05;
 }
 
-/* DETECTIVE'S MAHOGANY WOOD DESK BACKGROUND */
+/* REALISTIC WOOD DRAWER SURFACE BACKGROUND */
 body {
   width: 100%;
   min-height: 100vh;
@@ -47,21 +47,33 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   
-  background-color: #26190f;
+  /* Deep Wooden Drawer Texture with Horizontal Wood Planks */
+  background-color: #24160c;
   background-image: 
-    radial-gradient(circle at 50% 25%, rgba(255, 215, 140, 0.22) 0%, rgba(255, 180, 80, 0.08) 40%, transparent 75%),
+    /* Subtle Drawer Lamp Warm Glow Focus */
+    radial-gradient(circle at 48% 30%, rgba(255, 215, 140, 0.18) 0%, rgba(255, 170, 70, 0.05) 45%, transparent 75%),
+    /* Horizontal Drawer Wood Planks & Seams */
+    repeating-linear-gradient(
+      0deg,
+      rgba(10, 6, 3, 0.75) 0px,
+      rgba(10, 6, 3, 0.75) 3px,
+      rgba(38, 23, 13, 0.85) 4px,
+      rgba(48, 30, 17, 0.85) 120px,
+      rgba(18, 10, 5, 0.85) 124px
+    ),
+    /* Vertical Wood Fine Grain Lines */
     repeating-linear-gradient(
       90deg,
-      rgba(15, 10, 6, 0.5) 0px,
-      rgba(45, 30, 18, 0.5) 3px,
-      rgba(25, 16, 9, 0.5) 6px,
-      rgba(55, 36, 22, 0.5) 10px
+      rgba(15, 8, 4, 0.3) 0px,
+      rgba(35, 20, 10, 0.3) 2px,
+      rgba(20, 11, 5, 0.3) 5px
     ),
-    radial-gradient(ellipse at 50% 50%, #3d2919 0%, #1a110a 70%, #0d0804 100%);
+    /* Deep Oak Base Color */
+    linear-gradient(180deg, #2b1a0d 0%, #150c05 100%);
   background-attachment: fixed;
 }
 
-/* Vignette Shadow Overlay */
+/* Outer Drawer Vignette Overlay */
 body::after {
   content: '';
   position: fixed;
@@ -69,16 +81,16 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0, 0, 0, 0.8) 100%);
+  background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0, 0, 0, 0.82) 100%);
   pointer-events: none;
   z-index: 1;
 }
 
 /* ==========================================================================
-   REALISTIC DETECTIVE DESK SCATTERED PROPS
+   REALISTIC WOOD DRAWER ELEMENTS (COFFEE MUG STAIN & REAL BADGE ONLY)
    ========================================================================== */
 
-.desk-props-layer {
+.wood-drawer-props-layer {
   position: fixed;
   top: 0;
   left: 0;
@@ -89,90 +101,64 @@ body::after {
   overflow: hidden;
 }
 
-.desk-prop {
+/* REALISTIC DRIED COFFEE MUG STAIN ON THE WOODEN DRAWER SURFACE */
+.drawer-coffee-stain {
   position: absolute;
-  filter: drop-shadow(4px 10px 18px rgba(0, 0, 0, 0.85));
+  top: 60px;
+  left: 55px;
+  width: 140px;
+  height: 140px;
+  border: 7px solid rgba(54, 31, 10, 0.45);
+  border-radius: 50%;
+  filter: blur(1.2px);
+  transform: rotate(-15deg) scaleY(0.88);
+  box-shadow: 
+    inset 0 0 12px rgba(45, 24, 7, 0.35),
+    0 0 8px rgba(45, 24, 7, 0.25);
+  opacity: 0.85;
+}
+
+.drawer-coffee-stain::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 35px;
+  height: 18px;
+  background: rgba(54, 31, 10, 0.3);
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.drawer-coffee-stain-secondary {
+  position: absolute;
+  bottom: 80px;
+  right: 180px;
+  width: 110px;
+  height: 110px;
+  border: 5px solid rgba(48, 27, 8, 0.35);
+  border-radius: 50%;
+  filter: blur(1px);
+  transform: rotate(22deg) scaleY(0.85);
+  opacity: 0.7;
+}
+
+/* EXTREMELY REALISTIC POLICE DETECTIVE BADGE */
+.drawer-prop-badge {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  width: 160px;
+  transform: rotate(12deg);
+  filter: drop-shadow(8px 16px 25px rgba(0, 0, 0, 0.95));
   transition: transform 0.3s ease;
 }
 
-/* 1. STEEL HANDCUFFS (TOP LEFT) */
-.prop-handcuffs {
-  top: 45px;
-  left: 35px;
-  width: 150px;
-  transform: rotate(-18deg);
-  opacity: 0.92;
-}
-
-/* 2. GOLD DETECTIVE BADGE (TOP RIGHT) */
-.prop-badge {
-  top: 40px;
-  right: 45px;
-  width: 110px;
-  transform: rotate(14deg);
-  opacity: 0.95;
-}
-
-/* 3. CONFIDENTIAL EVIDENCE MEMO PAPER (BOTTOM LEFT PEEKING) */
-.prop-memo-paper {
-  bottom: 35px;
-  left: -20px;
-  width: 220px;
-  background: #f4ebd9;
-  border: 1px solid #2b2014;
-  padding: 1rem 1.2rem;
-  font-family: var(--font-typewriter);
-  box-shadow: 6px 12px 25px rgba(0, 0, 0, 0.85);
-  transform: rotate(11deg);
-  border-radius: 2px;
-  opacity: 0.9;
-}
-
-.memo-header {
-  font-family: var(--font-header);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--stamp-red);
-  border-bottom: 1px solid rgba(187, 10, 10, 0.4);
-  padding-bottom: 0.2rem;
-  margin-bottom: 0.4rem;
-}
-
-.memo-line {
-  font-size: 0.62rem;
-  color: #2b2014;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.memo-stamp {
-  font-family: var(--font-stamp);
-  color: var(--stamp-red);
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 2px solid var(--stamp-red);
-  display: inline-block;
-  padding: 0.1rem 0.4rem;
-  transform: rotate(-12deg);
-  margin-top: 0.4rem;
-}
-
-/* 4. BRASS PEN & CARTRIDGE (BOTTOM RIGHT) */
-.prop-brass-pen {
-  bottom: 50px;
-  right: 25px;
-  width: 170px;
-  transform: rotate(-25deg);
-  opacity: 0.92;
-}
-
-/* Hide desktop props on small screens to preserve space */
+/* Responsive Hide for Props on Very Small Mobile Devices */
 @media (max-width: 900px) {
-  .prop-handcuffs { width: 100px; top: 15px; left: 10px; }
-  .prop-badge { width: 80px; top: 15px; right: 10px; }
-  .prop-memo-paper { display: none; }
-  .prop-brass-pen { display: none; }
+  .drawer-prop-badge { width: 115px; top: 18px; right: 15px; }
+  .drawer-coffee-stain { width: 95px; height: 95px; top: 20px; left: 10px; }
+  .drawer-coffee-stain-secondary { display: none; }
 }
 
 /* Viewport Container */
