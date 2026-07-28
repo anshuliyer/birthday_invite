@@ -133,9 +133,6 @@
               <div class="rsvp-success-stamp" id="rsvp-success-stamp">
                 STATEMENT LOGGED // ATTENDANCE ACKNOWLEDGED
               </div>
-
-              <!-- ADMIN VIEW LOGS LINK -->
-              <span class="admin-view-trigger" onclick="openAdminModal()">[ VIEW ADMIN DOSSIER LOGS ]</span>
             </form>
 
           </div>
@@ -262,26 +259,6 @@
 
   </main>
 
-  <!-- =========================================================================
-       ADMIN DOSSIER LOGS MODAL (FOR VIEWING ALL RSVPs DIRECTLY ON SITE)
-       ========================================================================= -->
-  <div class="admin-modal-overlay" id="admin-modal-overlay">
-    <div class="admin-modal-box">
-      <div class="admin-modal-header">
-        <div class="admin-modal-title">DIRECTORATE ADMIN DOSSIER LOGS</div>
-        <button class="close-modal-btn" onclick="closeAdminModal()">CLOSE</button>
-      </div>
-
-      <div id="admin-logs-content">
-        <p style="font-size: 0.88rem; color: #5c452b;">Loading logged suspect responses...</p>
-      </div>
-
-      <div style="margin-top: 1rem; text-align: right;">
-        <button class="close-modal-btn" onclick="clearAdminLogs()" style="background: var(--stamp-red);">CLEAR LOCAL LOGS</button>
-      </div>
-    </div>
-  </div>
-
   <!-- Interactive Folder & Google Sheets RSVP Sync Logic -->
   <script>
     // =========================================================================
@@ -385,16 +362,7 @@
         timestamp: timestamp
       };
 
-      // 1. Local backup logging
-      try {
-        let logs = JSON.parse(localStorage.getItem('bnd_rsvp_logs') || '[]');
-        logs.push(payload);
-        localStorage.setItem('bnd_rsvp_logs', JSON.stringify(logs));
-      } catch(e) {
-        console.error('LocalStorage error:', e);
-      }
-
-      // 2. Google Sheets API Webhook trigger
+      // Direct Google Sheets API Webhook trigger
       if (GOOGLE_SCRIPT_WEBHOOK_URL && GOOGLE_SCRIPT_WEBHOOK_URL.trim() !== '') {
         fetch(GOOGLE_SCRIPT_WEBHOOK_URL, {
           method: 'POST',
@@ -406,57 +374,13 @@
         }).catch(err => console.error('Google Sheets sync error:', err));
       }
 
-      // 3. UI Confirmation stamp
+      // UI Confirmation stamp
       const successStamp = document.getElementById('rsvp-success-stamp');
       const submitBtn = document.getElementById('submit-rsvp-btn');
       
       if (successStamp) {
         successStamp.style.display = 'block';
         submitBtn.style.display = 'none';
-      }
-    }
-
-    // ADMIN MODAL LOGIC
-    function openAdminModal() {
-      const modal = document.getElementById('admin-modal-overlay');
-      const container = document.getElementById('admin-logs-content');
-      modal.classList.add('active');
-
-      const logs = JSON.parse(localStorage.getItem('bnd_rsvp_logs') || '[]');
-      if (logs.length === 0) {
-        container.innerHTML = '<p style="font-size: 0.9rem; color: #5c452b;">No suspect RSVP responses logged yet.</p>';
-        return;
-      }
-
-      let html = '';
-      logs.forEach((log, idx) => {
-        html += `
-          <div class="rsvp-log-item">
-            <div class="rsvp-log-item-header">
-              <span>SUSPECT #${idx + 1}: ${log.suspect}</span>
-              <span class="rsvp-log-status">${log.status}</span>
-            </div>
-            <div style="font-size: 0.85rem; color: #3b2e21; margin-top: 0.3rem;">
-              <strong>Statement/Alibi:</strong> ${log.alibi || 'None provided'}
-            </div>
-            <div style="font-size: 0.72rem; color: #7a6348; margin-top: 0.4rem;">
-              Log Time: ${log.timestamp}
-            </div>
-          </div>
-        `;
-      });
-
-      container.innerHTML = html;
-    }
-
-    function closeAdminModal() {
-      document.getElementById('admin-modal-overlay').classList.remove('active');
-    }
-
-    function clearAdminLogs() {
-      if (confirm('Clear all locally saved suspect RSVP logs?')) {
-        localStorage.removeItem('bnd_rsvp_logs');
-        openAdminModal();
       }
     }
 
