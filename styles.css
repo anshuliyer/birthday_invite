@@ -1,20 +1,20 @@
 /* ==========================================================================
-   BANGALORE NORTH DIRECTORATE - PERFECT FOLDER & ENLARGED DRAWER PROPS
+   BANGALORE NORTH DIRECTORATE - HYPER-REALISTIC WOOD, FILE & BOOK WEAR & TEAR
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap');
 
 :root {
   /* Serious Police Palette */
-  --bg-desk: #24160c;
-  --folder-bg: #c99b5b;
-  --folder-bg-dark: #b38546;
-  --folder-shadow: rgba(0, 0, 0, 0.85);
-  --paper-inside: #f4efe4;
-  --paper-border: #2b2219;
-  --ink-black: #181410;
-  --stamp-red: #bb0a0a;
-  --agency-gold: #aa8039;
+  --bg-desk: #1f1107;
+  --folder-bg: #cda263;
+  --folder-bg-dark: #ad7c3b;
+  --folder-shadow: rgba(0, 0, 0, 0.92);
+  --paper-inside: #f2ece0;
+  --paper-border: #261d15;
+  --ink-black: #14100c;
+  --stamp-red: #b80909;
+  --agency-gold: #a67c33;
   --highlighter-yellow: rgba(253, 224, 71, 0.85);
   
   /* Fonts */
@@ -34,10 +34,10 @@
 html {
   width: 100%;
   min-height: 100vh;
-  background-color: #0d0603;
+  background-color: #080402;
 }
 
-/* DEEP WOODEN DRAWER INTERIOR FLOOR */
+/* HYPER-REALISTIC WOODEN DRAWER FLOOR WITH SCRATCHES & AGED VARNISH */
 body {
   width: 100%;
   min-height: 100vh;
@@ -45,22 +45,56 @@ body {
   font-family: var(--font-typewriter);
   position: relative;
   -webkit-font-smoothing: antialiased;
-  background-color: #1e1108;
+  background-color: #1a0e06;
+  
+  /* Multilayered Wood Grain, Knots, Scratches & Dust Shadows */
   background-image: 
-    radial-gradient(circle at 50% 30%, rgba(255, 215, 140, 0.16) 0%, rgba(255, 170, 70, 0.04) 50%, transparent 80%),
+    /* Warm Desk Lamp Glow Focus */
+    radial-gradient(circle at 48% 28%, rgba(255, 205, 120, 0.18) 0%, rgba(255, 160, 50, 0.04) 50%, transparent 80%),
+    /* Micro Varnish Scratches & Wood Gouges */
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.015) 0px,
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    /* Deep Horizontal Wood Grain Fiber Seams */
     repeating-linear-gradient(
       0deg,
-      rgba(8, 4, 2, 0.8) 0px,
-      rgba(8, 4, 2, 0.8) 3px,
-      rgba(30, 17, 9, 0.85) 4px,
-      rgba(40, 23, 12, 0.85) 120px
+      rgba(5, 2, 1, 0.85) 0px,
+      rgba(5, 2, 1, 0.85) 3px,
+      rgba(38, 21, 11, 0.9) 4px,
+      rgba(48, 27, 14, 0.9) 115px,
+      rgba(15, 7, 3, 0.9) 120px
     ),
-    linear-gradient(180deg, #221309 0%, #0d0603 100%);
+    /* Vertical Wood Pores & Fine Knots */
+    repeating-linear-gradient(
+      90deg,
+      rgba(12, 6, 3, 0.4) 0px,
+      rgba(35, 18, 9, 0.4) 2px,
+      rgba(18, 9, 4, 0.4) 6px
+    ),
+    /* Base Oak Shading */
+    linear-gradient(180deg, #241308 0%, #0d0602 100%);
   background-attachment: fixed;
 }
 
+/* Interior Drawer Corner Dust & Shadow Mask */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.88) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
 /* ==========================================================================
-   PROMINENT 3D OPEN WOODEN DRAWER FRAME (VISIBLE EDGES, WALLS & HANDLE)
+   PROMINENT 3D OPEN WOODEN DRAWER FRAME (SCRATCHED WOOD EDGES & BEVEL WEAR)
    ========================================================================== */
 
 .open-drawer-container {
@@ -69,42 +103,48 @@ body {
   position: relative;
 }
 
-/* TOP DRAWER OVERHANG LIP / RIM EDGE */
+/* TOP DRAWER OVERHANG LIP / SCRATCHED WOOD RIM */
 .drawer-edge-top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 24px;
-  background: linear-gradient(180deg, #422915 0%, #26160a 70%, #120904 100%);
-  border-bottom: 2px solid #0f0703;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.95);
+  height: 26px;
+  background: linear-gradient(180deg, #482c17 0%, #2b180a 70%, #120803 100%);
+  border-bottom: 2px solid #0a0402;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.95),
+    inset 0 1px 0 rgba(255, 230, 180, 0.15); /* Scratched Edge Highlight */
   z-index: 40;
 }
 
-/* LEFT DRAWER SIDE WALL EDGE */
+/* LEFT DRAWER SIDE WALL EDGE WITH WOOD GRAIN WEAR */
 .drawer-edge-left {
   position: fixed;
   top: 0;
   left: 0;
-  width: 24px;
+  width: 26px;
   height: 100%;
-  background: linear-gradient(90deg, #3d2513 0%, #29180b 60%, #140a04 100%);
-  border-right: 2px solid #0f0703;
-  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.95);
+  background: linear-gradient(90deg, #422714 0%, #28160a 60%, #120703 100%);
+  border-right: 2px solid #0a0402;
+  box-shadow: 
+    10px 0 25px rgba(0, 0, 0, 0.95),
+    inset 1px 0 0 rgba(255, 230, 180, 0.12);
   z-index: 40;
 }
 
-/* RIGHT DRAWER SIDE WALL EDGE */
+/* RIGHT DRAWER SIDE WALL EDGE WITH WOOD GRAIN WEAR */
 .drawer-edge-right {
   position: fixed;
   top: 0;
   right: 0;
-  width: 24px;
+  width: 26px;
   height: 100%;
-  background: linear-gradient(270deg, #3d2513 0%, #29180b 60%, #140a04 100%);
-  border-left: 2px solid #0f0703;
-  box-shadow: -8px 0 20px rgba(0, 0, 0, 0.95);
+  background: linear-gradient(270deg, #422714 0%, #28160a 60%, #120703 100%);
+  border-left: 2px solid #0a0402;
+  box-shadow: 
+    -10px 0 25px rgba(0, 0, 0, 0.95),
+    inset -1px 0 0 rgba(255, 230, 180, 0.12);
   z-index: 40;
 }
 
@@ -114,41 +154,45 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 28px;
-  background: linear-gradient(0deg, #472b16 0%, #2b1a0d 70%, #120904 100%);
-  border-top: 2px solid #0f0703;
-  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.95);
+  height: 30px;
+  background: linear-gradient(0deg, #4d2f19 0%, #2e1a0b 70%, #120703 100%);
+  border-top: 2px solid #0a0402;
+  box-shadow: 
+    0 -8px 25px rgba(0, 0, 0, 0.95),
+    inset 0 1px 0 rgba(255, 230, 180, 0.15);
   z-index: 40;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* BRASS DRAWER PULL HANDLE IN CENTER OF BOTTOM LIP */
+/* TARNISHED BRASS DRAWER PULL HANDLE IN CENTER OF BOTTOM LIP */
 .drawer-brass-handle {
-  width: 110px;
-  height: 14px;
-  background: linear-gradient(180deg, #ffe699 0%, #d4af37 40%, #806312 85%, #3d2f06 100%);
-  border: 1px solid #362904;
+  width: 120px;
+  height: 15px;
+  background: linear-gradient(180deg, #ffe699 0%, #d4af37 35%, #7a5e0e 80%, #302403 100%);
+  border: 1px solid #2e2003;
   border-radius: 3px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.95), inset 0 1px 2px rgba(255, 255, 240, 0.7);
+  position: relative;
 }
 
-/* METAL DRAWER SLIDE RAILS */
+/* METAL DRAWER SLIDE RAILS WITH GREASE SHINE */
 .drawer-slide-rail {
   position: fixed;
   top: 0;
   height: 100%;
   width: 8px;
-  background: linear-gradient(90deg, #888888 0%, #dddddd 40%, #444444 100%);
+  background: linear-gradient(90deg, #666666 0%, #cccccc 40%, #222222 100%);
   z-index: 35;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.rail-left { left: 24px; }
-.rail-right { right: 24px; }
+.rail-left { left: 26px; }
+.rail-right { right: 26px; }
 
 /* ==========================================================================
-   ENLARGED REALISTIC COP DRAWER PROPS & ARTIFACTS
+   HYPER-REALISTIC WOOD DRAWER PROPS & DISTRESSED ARTIFACTS
    ========================================================================== */
 
 .wood-drawer-props-layer {
@@ -164,11 +208,11 @@ body {
 
 .drawer-prop {
   position: absolute;
-  filter: drop-shadow(6px 14px 22px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(6px 14px 22px rgba(0, 0, 0, 0.92));
   transition: transform 0.3s ease;
 }
 
-/* 1. DRIED COFFEE MUG STAIN */
+/* 1. DRIED COFFEE MUG STAIN WITH DRIED LIQUID MARKS */
 .drawer-coffee-stain {
   position: absolute;
   top: 45px;
@@ -179,6 +223,7 @@ body {
   border-radius: 50%;
   filter: blur(1.2px);
   transform: rotate(-15deg) scaleY(0.88);
+  box-shadow: inset 0 0 14px rgba(45, 24, 7, 0.38);
   opacity: 0.85;
 }
 
@@ -194,22 +239,49 @@ body {
   opacity: 0.7;
 }
 
-/* 2. SIGNIFICANTLY LARGER HARDCOVER "LAW & ORDER" LEATHER BOUND BOOK */
+/* 2. HYPER-REALISTIC HARDCOVER "LAW & ORDER" LEATHER BOUND BOOK WITH WEAR & TEAR */
 .prop-law-book {
   top: 150px;
   right: 15px;
   width: 220px;
   height: 285px;
-  background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
-  border: 2px solid #3a4a6b;
+  /* Aged Leather Texture & Scuffed Corner Wear */
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(200, 160, 80, 0.12) 0%, transparent 50%),
+    linear-gradient(135deg, #1b273c 0%, #0c1828 100%);
+  border: 2px solid #384968;
   border-radius: 4px 10px 10px 4px;
-  box-shadow: 12px 20px 35px rgba(0, 0, 0, 0.95);
+  box-shadow: 
+    14px 22px 40px rgba(0, 0, 0, 0.95),
+    inset 0 0 20px rgba(0, 0, 0, 0.6),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.15); /* Scuffed Leather Edge */
   padding: 1.2rem 0.9rem;
   transform: rotate(8deg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.95;
+  opacity: 0.96;
+  position: relative;
+}
+
+/* Aged Yellowed Book Page Edge Block Visible along Right Edge */
+.prop-law-book::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: -8px;
+  width: 8px;
+  height: 96%;
+  background: repeating-linear-gradient(
+    0deg,
+    #e3d8c1 0px,
+    #c4b79c 1px,
+    #ded1b6 2px
+  );
+  border-radius: 0 2px 2px 0;
+  border: 1px solid #736348;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 .law-book-spine {
@@ -218,9 +290,10 @@ body {
   top: 0;
   width: 18px;
   height: 100%;
-  background: linear-gradient(90deg, #0d131f 0%, #2c3e5e 70%, #151e2d 100%);
+  background: linear-gradient(90deg, #09101a 0%, #2a3c5c 70%, #121b29 100%);
   border-right: 1.5px solid #4a5c80;
   border-radius: 4px 0 0 4px;
+  box-shadow: inset 1px 0 2px rgba(255, 255, 255, 0.15);
 }
 
 .law-book-cover {
@@ -228,17 +301,22 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1.5px solid #d4af37;
+  border: 1.5px stroke #d4af37;
+  border: 1.5px fill rgba(212, 175, 55, 0.8);
+  border: 1.5px solid rgba(212, 175, 55, 0.7);
   padding: 1.2rem 0.8rem;
   height: 100%;
   width: 100%;
   border-radius: 2px;
-  box-shadow: inset 0 0 12px rgba(212, 175, 55, 0.25);
+  box-shadow: 
+    inset 0 0 12px rgba(212, 175, 55, 0.22),
+    0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 .law-book-gold-seal {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.8));
 }
 
 .law-book-title {
@@ -247,9 +325,10 @@ body {
   font-weight: 700;
   color: #ffe699;
   letter-spacing: 0.14em;
-  border-bottom: 1.5px solid #d4af37;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.8);
   padding-bottom: 0.25rem;
   margin-bottom: 0.45rem;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .law-book-subtitle {
@@ -258,6 +337,7 @@ body {
   color: #dddddd;
   letter-spacing: 0.1em;
   margin-bottom: auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .law-book-volume {
@@ -267,7 +347,7 @@ body {
   letter-spacing: 0.14em;
 }
 
-/* 3. ENLARGED TACTICAL FLASHLIGHT */
+/* 3. TACTICAL FLASHLIGHT */
 .prop-flashlight {
   top: 170px;
   left: 15px;
@@ -276,7 +356,7 @@ body {
   opacity: 0.95;
 }
 
-/* 4. ENLARGED STEEL HANDCUFFS (TOP LEFT) */
+/* 4. STEEL HANDCUFFS (TOP LEFT) */
 .prop-handcuffs {
   top: 35px;
   left: 35px;
@@ -285,7 +365,7 @@ body {
   opacity: 0.95;
 }
 
-/* 5. ENLARGED POLICE DETECTIVE BADGE (TOP RIGHT) */
+/* 5. POLICE DETECTIVE BADGE (TOP RIGHT) */
 .drawer-prop-badge {
   top: 35px;
   right: 35px;
@@ -294,7 +374,7 @@ body {
   filter: drop-shadow(8px 16px 25px rgba(0, 0, 0, 0.95));
 }
 
-/* 6. ENLARGED COP BALLPOINT PEN (BOTTOM RIGHT) */
+/* 6. COP BALLPOINT PEN (BOTTOM RIGHT) */
 .prop-brass-pen {
   bottom: 45px;
   right: 45px;
@@ -303,7 +383,7 @@ body {
   opacity: 0.95;
 }
 
-/* 7. ENLARGED EVIDENCE MEMO TAG (BOTTOM LEFT) */
+/* 7. EVIDENCE MEMO TAG (BOTTOM LEFT) */
 .prop-memo-paper {
   bottom: 40px;
   left: 20px;
@@ -331,7 +411,7 @@ body {
 }
 
 /* ==========================================================================
-   FULLY VISIBLE FOLDER VIEWPORT CONTAINER
+   HYPER-REALISTIC MANILA FOLDER WEAR & TEAR (DOG-EAR CORNERS, CREASES & STAINS)
    ========================================================================== */
 
 .viewport-container {
@@ -392,7 +472,7 @@ body {
   font-weight: 700;
 }
 
-/* POLICE FOLDER BODY */
+/* HYPER-REAL MANILA DOSSIER FOLDER WITH AGED EDGES & CORNER CREASES */
 .police-folder {
   width: 100%;
   position: relative;
@@ -400,13 +480,20 @@ body {
   min-height: 560px;
 }
 
+/* BASE BACK FOLDER */
 .folder-base-back {
   width: 100%;
   min-height: 560px;
-  background: linear-gradient(145deg, var(--folder-bg) 0%, var(--folder-bg-dark) 100%);
+  /* Distressed Worn Manila Texture & Corner Wear */
+  background: 
+    radial-gradient(circle at 90% 10%, rgba(120, 80, 30, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(70, 40, 10, 0.2) 0%, transparent 45%),
+    linear-gradient(145deg, var(--folder-bg) 0%, var(--folder-bg-dark) 100%);
   border: 1px solid #140e08;
   border-radius: 8px 32px 6px 6px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9);
+  box-shadow: 
+    0 22px 50px rgba(0, 0, 0, 0.92),
+    inset 0 0 30px rgba(70, 45, 15, 0.35); /* Worn Edge Shadow */
   padding: 2.4rem 1.8rem 2.2rem 1.8rem;
   position: relative;
   display: flex;
@@ -417,13 +504,14 @@ body {
   position: absolute;
   top: 0;
   left: 20px;
-  width: 2px;
+  width: 2.5px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.15);
   pointer-events: none;
 }
 
-/* FRONT COVER HINGED FLAP */
+/* FRONT COVER HINGED FLAP WITH DISTRESSED EDGES & DOG-EAR FOLD */
 .folder-front-flap {
   position: absolute;
   top: 0;
@@ -431,10 +519,16 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  background: linear-gradient(145deg, var(--folder-bg) 0%, var(--folder-bg-dark) 100%);
+  /* Aged Manila Cardboard Grain & Water Stains */
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(90, 55, 15, 0.25) 0%, transparent 35%),
+    radial-gradient(circle at 20% 80%, rgba(120, 80, 25, 0.2) 0%, transparent 40%),
+    linear-gradient(145deg, var(--folder-bg) 0%, var(--folder-bg-dark) 100%);
   border-radius: 8px 32px 6px 6px;
   border: 1px solid #140e08;
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.85);
+  box-shadow: 
+    0 18px 40px rgba(0, 0, 0, 0.88),
+    inset 0 0 25px rgba(60, 40, 15, 0.4);
   padding: 2.4rem 1.8rem 2.2rem 1.8rem;
   transform-origin: left center;
   transform-style: preserve-3d;
@@ -444,6 +538,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* REALISTIC DOG-EAR BENT CORNER ON COVER FLAP */
+.folder-front-flap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 28px 28px 0;
+  border-color: transparent #24160c transparent transparent;
+  filter: drop-shadow(-2px 3px 3px rgba(0, 0, 0, 0.6));
+  z-index: 25;
 }
 
 .police-folder.is-unsealed .folder-front-flap {
@@ -477,10 +586,11 @@ body {
   right: 20px;
   width: 85px;
   height: 85px;
-  border: 4px solid rgba(70, 45, 18, 0.2);
+  border: 4px solid rgba(70, 45, 18, 0.22);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(1px);
+  box-shadow: inset 0 0 8px rgba(70, 45, 18, 0.15);
 }
 
 .paper-clip {
